@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 // import moment from 'moment';
-import kotergate from '../assets/kotergate1.jpg'
+import bgImage from '../assets/bgIslam.jpg'
 import timeTableData from './data'
 import '../style/timetable.css' 
 
@@ -37,7 +37,7 @@ class timetable extends Component {
 
         let style={  
             // backgroundImage: url(kotergate),
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.5)), url(${kotergate})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
