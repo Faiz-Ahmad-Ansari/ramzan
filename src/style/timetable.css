@@ -1,3 +1,9 @@
 /* .modalBtn {
     margin-top: 13px;
 } */
+.tableHeader{
+    background-color: #3f0d12;
+    background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
+}
+/* background-color #3f0d12;
+background-image linear-gradient(315deg, #3f0d12 0%, #a71d31 74%); */
