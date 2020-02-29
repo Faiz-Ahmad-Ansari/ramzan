@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react';
-import moment from 'moment';
+// import moment from 'moment';
+import kotergate from '../assets/kotergate1.jpg'
 import timeTableData from './data'
 import '../style/timetable.css' 
 
@@ -33,22 +34,30 @@ class timetable extends Component {
         // console.log(e)
         // console.log(f)
         // console.log(b.diff(c))
+
+        let style={  
+            // backgroundImage: url(kotergate),
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.5)), url(${kotergate})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }
         return (
-            <>
-                <div className='row ' >
-                     <div className='col-sm-12 mt-2'>
-                         <h3 className='text-center '>Ramzan Time Table 2020</h3>
+            <div style={style}>
+                <div className='row m-0'  >
+                     <div className='col-12 mt-2'>
+                         <h3 className='text-center text-white'>Ramzan Time Table 2020</h3>
                     </div>
                 {/* <!-- Button trigger modal --> */}
-                    <div className='col-sm-1 mt-2 d-none '>
+                    <div className='col-1 mt-2 d-none '>
                         <button type="button" ref={this.popUp} className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
                 </div>
 
-                <div className='table-responsive-sm'>
-                    <table className='table text-center table-bordered table-hover '>
+                <div className='table-responsive '>
+                    <table className='table text-center table-bordered table-hover m-0'>
                         <thead>
                             <tr className='bg-primary text-white' >
                                 <th scope='col' className='text-center'>Roza</th>
@@ -62,7 +71,7 @@ class timetable extends Component {
                             timeTableData.map((e,i)=>{
                                  return(            
                                         // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
-                                        <tr key={i} className={e.date === '15 May 2019' ? 'bg-warning' : ''}>
+                                        <tr key={i} className={e.date === '15 May 2019' ? 'bg-warning' : 'text-white'}>
                                             <td>{e.roza}</td>
                                             <td>{e.date}</td>
                                             <td>{e.sehr }</td>
@@ -79,7 +88,7 @@ class timetable extends Component {
 
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div className="modal-dialog modal-dialog-centered modal" role="document">
                         <div className="modal-content">
                         <div className="modal-header ">
                                 <h4 className="modal-title " id="exampleModalLongTitle">Today's</h4>
@@ -95,20 +104,20 @@ class timetable extends Component {
                                     return(
                                         <div key={i}>
                                             <div className='row'>
-                                                <div className='col-sm-6'>Roza No. -</div> 
-                                                <div className='col-sm-6'>{e.roza}</div>
+                                                <div className='col-6'>Roza No. -</div> 
+                                                <div className='col-6'><b>{e.roza}</b></div>
                                             </div>
                                              <div className='row'>   
-                                                <div className='col-sm-6'>Date -</div> 
-                                                <div className='col-sm-6'>{e.date}</div>
+                                                <div className='col-6'>Date -</div> 
+                                                <div className='col-6'><b>{e.date}</b></div>
                                             </div>
                                             <div className='row'>
-                                                <div className='col-sm-6'>Sehr Time  -</div>
-                                                <div className='col-sm-6'>{e.sehr}</div>
+                                                <div className='col-6'>Sehr Time  -</div>
+                                                <div className='col-6'><b>{e.sehr}</b></div>
                                             </div>
                                             <div className='row'>
-                                                <div className='col-sm-6'>Iftar Time -</div>
-                                                <div className='col-sm-6'>{e.iftaar}</div>
+                                                <div className='col-6'>Iftar Time -</div>
+                                                <div className='col-6'><b>{e.iftaar}</b>    </div>
                                             </div>
                                         </div>
                                     )
@@ -122,7 +131,7 @@ class timetable extends Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
           );
     }
 }
