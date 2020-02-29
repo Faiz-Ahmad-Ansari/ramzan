@@ -44,9 +44,9 @@ class timetable extends Component {
           }
         return (
             <div style={style}>
-                <div className='row m-0 sticky-top' style={{backgroundColor:'black'}} >
+                <div className='row m-0 title' >
                      <div className='col-12  mt-2'>
-                         <h3 className='text-center text-white'>Ramzan Time Table 2020</h3>
+                         <h3 className='text-center '>Ramzan Time Table 2020</h3>
                     </div>
                 {/* <!-- Button trigger modal --> */}
                     <div className='col-1 mt-2 d-none '>
@@ -104,19 +104,23 @@ class timetable extends Component {
                                     return(
                                         <div key={i}>
                                             <div className='row'>
-                                                <div className='col-6'>Roza No. -</div> 
+                                                <div className='col-4'>Roza No.</div> 
+                                                <div className='col-2'>:</div> 
                                                 <div className='col-6'><b>{e.roza}</b></div>
                                             </div>
                                              <div className='row'>   
-                                                <div className='col-6'>Date -</div> 
+                                                <div className='col-4'>Date</div>
+                                                <div className='col-2'>:</div>  
                                                 <div className='col-6'><b>{e.date}</b></div>
                                             </div>
                                             <div className='row'>
-                                                <div className='col-6'>Sehr Time  -</div>
+                                                <div className='col-4'>Sehr Time</div>
+                                                <div className='col-2'>:</div> 
                                                 <div className='col-6'><b>{e.sehr}</b></div>
                                             </div>
                                             <div className='row'>
-                                                <div className='col-6'>Iftar Time -</div>
+                                                <div className='col-4'>Iftar Time</div>
+                                                <div className='col-2'>:</div> 
                                                 <div className='col-6'><b>{e.iftaar}</b>    </div>
                                             </div>
                                         </div>
