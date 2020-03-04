@@ -63,17 +63,20 @@ class timetable extends Component {
                 
             } else { 
                 timeLeftForIftar = 'Done for today'
+                
             }
+            // console.log(timeLeftForIftar)
 
             this.setState({timeLeftForIftar:timeLeftForIftar})    
     } 
 
 
     render() { 
+      
         // this.timeForSehr()
         setInterval(this.timeForSehr,1000)
         setInterval(this.timeForIftar,1000)
-               
+        // console.log(this.state.timeLeftForIftar)         
         let style={  
             // backgroundImage: url(kotergate),
             backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
@@ -145,16 +148,15 @@ class timetable extends Component {
                     <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered modal" role="document">
                             <div className="modal-content">
-                                <div className="modal-header ">
+                                <div className="modal-header modalHeader">
                                         <h4 className="modal-title " id="exampleModalLongTitle">Today's</h4>
                                         <button type="button" className="close " data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>          
                                 </div>
-                                <div className="modal-body">
+                                <div className="modal-body modalBody">
                                 {
-                                    // console.log(timeTableData.filter(e=>e.date==='15 May 2019'))
-                                    
+                                    // console.log(timeTableData.filter(e=>e.date==='15 May 2019'))                                    
                                     timeTableData.filter(e=>e.date==='04 Mar 2020').map((e,i)=>{
                                         return(
                                             <div key={i}>
@@ -184,7 +186,7 @@ class timetable extends Component {
                                                     <div className='col-6'><b>
                                                     {
                                                             this.state.timeLeftForSehr !== '' ?
-                                                            this.state.timeLeftForSehr === ' Done for today' ? 'Done for today' : 
+                                                            this.state.timeLeftForSehr === 'Done for today' ? 'Done for today' : 
                                                             ` ${this.state.timeLeftForSehr.hours} Hrs, ${this.state.timeLeftForSehr.minutes} Min, ${this.state.timeLeftForSehr.seconds} Sec` : null 
                                                         }                        
                                                         </b></div>
@@ -193,10 +195,12 @@ class timetable extends Component {
                                                     <div className='col-4'>Time for Iftar</div>
                                                     <div className='col-2'>:</div> 
                                                     <div className='col-6'><b>
+                                                        {/* {console.log(this.state.timeLeftForIftar ==='Done for today')} */}
                                                     {
                                                             this.state.timeLeftForIftar !== '' ?
-                                                            this.state.timeLeftForIftar === ' Done for today' ? 'Done for today' : 
-                                                            ` ${this.state.timeLeftForIftar.hours} Hrs, ${this.state.timeLeftForIftar.minutes} Min, ${this.state.timeLeftForIftar.seconds} Sec` : null 
+                                                            this.state.timeLeftForIftar === 'Done for today' ? 'Done for today' : 
+                                                            ` ${this.state.timeLeftForIftar.hours} Hrs, ${this.state.timeLeftForIftar.minutes} Min, ${this.state.timeLeftForIftar.seconds} Sec`
+                                                             : null 
                                                         }                        
                                                         </b></div>
                                                 </div>
@@ -205,10 +209,10 @@ class timetable extends Component {
                                     })
                                 }
                             </div>
-                            <div className="modal-footer justify-content-center">
+                            <div className="modal-footer modalFooter justify-content-center">
                                 {/* <button type="button" className="btn btn-primary " data-dismiss="modal">Ok</button> */}
                                 {/* <button type="button" className="btn btn-primary">Save changes</button> */}
-                                       <div className='text-success  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
+                                       <div className='text-white  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
                             </div>
                         </div>
                     </div>

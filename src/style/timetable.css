@@ -16,3 +16,16 @@
     background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
 }
 
+.modalHeader{
+    background-image: linear-gradient(to right, #ed213a, #c7ab57);
+    color: white;
+}
+
+.modalBody{
+    background-image: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
+}
+
+.modalFooter{
+    background-image: linear-gradient(to left, #ed213a, #4e555d);
+}
+
