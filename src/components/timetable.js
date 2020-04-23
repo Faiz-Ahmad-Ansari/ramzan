@@ -22,6 +22,7 @@ class timetable extends Component {
     timeForSehr = () => {
         let currentDateTime = moment().format('DD MMM YYYY hh:mm:ss a');
         let todaysObj       = timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY'))
+   if(todaysObj.length>0){
         let sehrTime        = `${todaysObj[0].date}${' '}${todaysObj[0].sehr}`
         let todaysObjInMs   = moment(currentDateTime).valueOf()
         let sehrTimeInMs    = moment(sehrTime).valueOf()
@@ -41,11 +42,15 @@ class timetable extends Component {
                 timeLeftForSehr = 'Done for today'
             }
 
-            this.setState({timeLeftForSehr:timeLeftForSehr})    
+            this.setState({timeLeftForSehr:timeLeftForSehr})
+        }else{
+            return false
+        }    
     } 
     timeForIftar = () => {
         let currentDateTime = moment().format('DD MMM YYYY hh:mm:ss a');
         let todaysObj       = timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY'))
+        if(todaysObj.length>0){
         let iftarTime        = `${todaysObj[0].date}${' '}${todaysObj[0].iftaar}`
         let todaysObjInMs   = moment(currentDateTime).valueOf()
         let iftarTimeInMs    = moment(iftarTime).valueOf()
@@ -67,16 +72,19 @@ class timetable extends Component {
             }
             // console.log(timeLeftForIftar)
 
-            this.setState({timeLeftForIftar:timeLeftForIftar})    
+            this.setState({timeLeftForIftar:timeLeftForIftar})
+        }else {
+            return false
+        }    
     } 
 
 
     render() { 
       
-        // this.timeForSehr()
+// console.log(timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY')).length>0)
         setInterval(this.timeForSehr,1000)
         setInterval(this.timeForIftar,1000)
-        // console.log(this.state.timeLeftForIftar)         
+          
         let style={  
             // backgroundImage: url(kotergate),
             backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
@@ -98,17 +106,6 @@ class timetable extends Component {
                     </div>
                 </div>
 
-                {/* <div className='row  text-white'>
-                    <div className='col-6'>
-                        Time Remaining For Sehr :
-                            {
-                            this.state.timeLeftForSehr !== '' ?
-                             this.state.timeLeftForSehr === ' Done for today' ? 'Done for today' : 
-                             ` ${this.state.timeLeftForSehr.hours} Hrs, ${this.state.timeLeftForSehr.minutes} Min, ${this.state.timeLeftForSehr.seconds} Sec` : null 
-                        }                        
-                    </div>
-                    <div className='col-6 text-right'>Date</div>
-                </div> */}
 
                 <div className='table-responsive '>
                     <table className='table text-center table-bordered table-hover m-0'>
@@ -139,7 +136,7 @@ class timetable extends Component {
                         </tbody>
                     </table>
                     {/* <hr/> */}
-                        <div className='text-info text-center pt-1'>Developed by Faiz Ahmad Ansari, 7775995030</div>
+                        <div className='text-info text-center pt-1'><span className='small text-white-50'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div>
                     {/* <hr/> */}
                 </div>
 
@@ -157,7 +154,7 @@ class timetable extends Component {
                                 <div className="modal-body modalBody">
                                 {
                                     // console.log(timeTableData.filter(e=>e.date==='15 May 2019'))                                    
-                                    timeTableData.filter(e=>e.date==='04 Mar 2020').map((e,i)=>{
+                                    timeTableData.filter(e=>e.date===moment().format('DD MMM YYYY')).map((e,i)=>{
                                         return(
                                             <div key={i}>
                                                 <div className='row'>
@@ -210,8 +207,6 @@ class timetable extends Component {
                                 }
                             </div>
                             <div className="modal-footer modalFooter justify-content-center">
-                                {/* <button type="button" className="btn btn-primary " data-dismiss="modal">Ok</button> */}
-                                {/* <button type="button" className="btn btn-primary">Save changes</button> */}
                                        <div className='text-white  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
                             </div>
                         </div>

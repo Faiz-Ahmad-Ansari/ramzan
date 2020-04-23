@@ -5,9 +5,9 @@
     animation : colorChange 7s infinite;
 }
 @keyframes colorChange{
-    0%{color:lightgreen}
-    25%{color:lightblue}
-    50%{color:lightgreen}
+    0%{color:#c6ffdd}
+    25%{color:#fbd786}
+    50%{color:#f7797d}
     100%{color:skyblue}
 }
 
