@@ -1,7 +1,7 @@
 const data = [
     {
         "roza": "1",
-        "date": "26 Apr 2020",
+        "date": "25 Apr 2020",
         "sehr": "04:49 am",
         "iftaar": "07:03 pm"
     },
