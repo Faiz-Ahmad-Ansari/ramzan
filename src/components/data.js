@@ -2,182 +2,182 @@ const data = [
     {
         "roza": "1",
         "date": "25 Apr 2020",
-        "sehr": "04:49 am",
-        "iftaar": "07:03 pm"
+        "sehr": "04:57 am",
+        "iftaar": "06:59 pm"
     },
     {
         "roza": "2",
         "date": "26 Apr 2020",
-        "sehr": "04:49 am",
-        "iftaar": "07:03 pm"
+        "sehr": "04:56 am",
+        "iftaar": "07:00 pm"
     },
     {
         "roza": "3",
         "date": "27 Apr 2020",
-        "sehr": "04:49 am",
-        "iftaar": "07:03 pm"
+        "sehr": "04:55 am",
+        "iftaar": "07:00 pm"
     },
     {
         "roza": "4",
         "date": "28 Apr 2020",
-        "sehr": "04:48 am",
-        "iftaar": "07:04 pm"
+        "sehr": "04:54 am",
+        "iftaar": "07:00 pm"
     },
     {
         "roza": "5",
         "date": "29 Apr 2020",
-        "sehr": "04:47 am",
-        "iftaar": "07:03 pm"
+        "sehr": "04:53 am",
+        "iftaar": "07:00 pm"
     },
     {
         "roza": "6",
         "date": "30 Apr 2020",
-        "sehr": "04:47 am",
-        "iftaar": "07:04 pm"
+        "sehr": "04:53 am",
+        "iftaar": "07:01 pm"
     },
     {
         "roza": "7",
         "date": "01 May 2020",
-        "sehr": "04:46 am",
-        "iftaar": "07:05 pm"
+        "sehr": "04:52 am",
+        "iftaar": "07:01 pm"
     },
     {
         "roza": "8",
         "date": "02 May 2020",
-        "sehr": "04:46 am",
-        "iftaar": "07:05 pm"
+        "sehr": "04:51 am",
+        "iftaar": "07:01 pm"
     },
     {
         "roza": "9",
         "date": "03 May 2020",
-        "sehr": "04:45 am",
-        "iftaar": "07:05 pm"
+        "sehr": "04:50 am",
+        "iftaar": "07:02 pm"
     },
     {
         "roza": "10",
         "date": "04 May 2020",
-        "sehr": "04:45 am",
-        "iftaar": "07:06 pm"
+        "sehr": "04:50 am",
+        "iftaar": "07:02 pm"
     },
     {
         "roza": "11",
         "date": "05 May 2020",
-        "sehr": "04:44 am",
-        "iftaar": "07:06 pm"
+        "sehr": "04:49 am",
+        "iftaar": "07:02 pm"
     },
     {
         "roza": "12",
         "date": "06 May 2020",
-        "sehr": "04:44 am",
-        "iftaar": "07:07 pm"
+        "sehr": "04:48 am",
+        "iftaar": "07:03 pm"
     },
     {
         "roza": "13",
         "date": "07 May 2020",
-        "sehr": "04:43 am",
-        "iftaar": "07:07 pm"
+        "sehr": "04:48 am",
+        "iftaar": "07:03 pm"
     },
     {
         "roza": "14",
         "date": "08 May 2020",
-        "sehr": "04:43 am",
-        "iftaar": "07:07 pm"
+        "sehr": "04:47 am",
+        "iftaar": "07:04 pm"
     },
     {
         "roza": "15",
         "date": "09 May 2020",
-        "sehr": "04:42 am",
-        "iftaar": "07:08 pm"
+        "sehr": "04:46 am",
+        "iftaar": "07:04 pm"
     },
     {
         "roza": "16",
         "date": "10 May 2020",
-        "sehr": "04:42 am",
-        "iftaar": "07:08 pm"
+        "sehr": "04:46 am",
+        "iftaar": "07:04 pm"
     },
     {
         "roza": "17",
         "date": "11 May 2020",
-        "sehr": "04:41 am",
-        "iftaar": "07:08 pm"
+        "sehr": "04:45 am",
+        "iftaar": "07:05 pm"
     },
     {
         "roza": "18",
         "date": "12 May 2020",
-        "sehr": "04:41 am",
-        "iftaar": "07:09 pm"
+        "sehr": "04:45 am",
+        "iftaar": "07:05 pm"
     },
     {
         "roza": "19",
         "date": "13 May 2020",
-        "sehr": "04:41 am",
-        "iftaar": "07:09 pm"
+        "sehr": "04:44 am",
+        "iftaar": "07:05 pm"
     },
     {
         "roza": "20",
         "date": "14 May 2020",
-        "sehr": "04:40 am",
-        "iftaar": "07:10 pm"
+        "sehr": "04:44 am",
+        "iftaar": "07:06 pm"
     },
     {
         "roza": "21",
         "date": "15 May 2020",
-        "sehr": "04:40 am",
-        "iftaar": "07:10 pm"
+        "sehr": "04:43 am",
+        "iftaar": "07:06 pm"
     },
     {
         "roza": "22",
         "date": "16 May 2020",
-        "sehr": "04:40 am",
-        "iftaar": "07:10 pm"
+        "sehr": "04:43 am",
+        "iftaar": "07:07 pm"
     },
     {
         "roza": "23",
         "date": "17 May 2020",
-        "sehr": "04:39 am",
-        "iftaar": "07:11 pm"
+        "sehr": "04:42 am",
+        "iftaar": "07:07 pm"
     },
     {
         "roza": "24",
         "date": "18 May 2020",
-        "sehr": "04:39 am",
-        "iftaar": "07:11 pm"
+        "sehr": "04:42 am",
+        "iftaar": "07:07 pm"
     },
     {
         "roza": "25",
         "date": "19 May 2020",
-        "sehr": "04:39 am",
-        "iftaar": "07:12 pm"
+        "sehr": "04:41 am",
+        "iftaar": "07:08 pm"
     },
     {
         "roza": "26",
         "date": "20 May 2020",
-        "sehr": "04:38 am",
-        "iftaar": "07:12 pm"
+        "sehr": "04:41 am",
+        "iftaar": "07:08 pm"
     },
     {
         "roza": "27",
         "date": "21 May 2019",
-        "sehr": "04:38 am",
-        "iftaar": "07:12 pm"
+        "sehr": "04:40 am",
+        "iftaar": "07:09 pm"
     },
     {
         "roza": "28",
         "date": "22 May 2019",
-        "sehr": "04:38 am",
-        "iftaar": "07:13 pm"
+        "sehr": "04:40 am",
+        "iftaar": "07:09 pm"
     },
     {
         "roza": "29",
         "date": "23 May 2019",
-        "sehr": "04:38 am",
-        "iftaar": "07:13 pm"
+        "sehr": "04:40 am",
+        "iftaar": "07:09 pm"
     },
     {
         "roza": "30",
         "date": "24 May 2019",
-        "sehr": "04:38 am",
-        "iftaar": "07:13 pm"
+        "sehr": "04:39 am",
+        "iftaar": "07:10 pm"
     },
     
 ]
