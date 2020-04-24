@@ -123,7 +123,7 @@ class timetable extends Component {
                                                             
                                  return(            
                                         // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
-                                        <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'bg-warning font-weight-bold' : 'text-white'}>
+                                        <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'highlight font-weight-bold' : 'text-white'}>
                                             <td>{e.roza}</td>
                                             <td>{e.date}</td>
                                             <td>{e.sehr }</td>
