@@ -11,6 +11,19 @@
     100%{color:skyblue}
 }
 
+.btn{
+    padding: 3px 40px !important;
+    font-size: 0.9rem !important;
+    border-radius: 1rem !important;
+}
+
+.btn-success{
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important
+}
+.btn-primary{
+    background-image: linear-gradient(to right, #F7BB97 0%, #DD5E89 51%, #F7BB97 100%)!important
+}
+
 .tableHeader{
     background-color: #3f0d12;
     background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 

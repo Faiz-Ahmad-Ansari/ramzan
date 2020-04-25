@@ -98,14 +98,20 @@ class timetable extends Component {
                      <div className='col-12  mt-2'>
                          <h4 className='text-center '>Ramzan Time Table 2020</h4>
                     </div>
+                </div>
                 {/* <!-- Button trigger modal --> */}
-                    <div className='col-1 mt-2 d-none '>
+                <div className='row p-0 m-0'>
+                    <div className='col-6 mt-1 mb-2 text-center '>
                         <button type="button" ref={this.popUp} className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
+                    <div className='col-6 mt-1 mb-2  text-center  '>
+                        <button type="button"  className="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">
+                            Dua's
+                        </button>
+                    </div>
                 </div>
-
 
                 <div className='table-responsive '>
                     <table className='table text-center table-bordered table-hover m-0'>
@@ -212,6 +218,42 @@ class timetable extends Component {
                         </div>
                     </div>
                 </div>
+                {/* modal end */}
+                    {/* <!-- Modal --> */}
+                    <div className="modal fade" id="exampleModalCenter2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div className="modal-dialog modal-dialog-centered modal" role="document">
+                {                        
+                    timeTableData.filter(e=>e.date===moment().format('DD MMM YYYY')).map((e,i)=>{
+                        return(
+                            <div className="modal-content">
+                                <div className="modal-header modalHeader">
+                                  <h4 className="modal-title " id="exampleModalLongTitle">Dua for Roza no.{e.roza}</h4>
+                                        <button type="button" className="close " data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>          
+                                </div>
+                                <div className="modal-body modalBody">
+                                
+                                            <div key={i}>
+                                                <div className='row'>
+                                                    <div className='col-12'>
+                                                        {e.dua}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                            </div>
+                            <div className="modal-footer modalFooter justify-content-center">
+                                       <div className='text-white  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
+                            </div>
+                        </div>
+                        )
+                    })
+                }
+
+                    </div>
+                </div>
+                {/* modal end */}
             </div>
           );
     }
