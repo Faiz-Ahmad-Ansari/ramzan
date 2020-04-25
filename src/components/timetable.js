@@ -102,12 +102,12 @@ class timetable extends Component {
                 {/* <!-- Button trigger modal --> */}
                 <div className='row p-0 m-0'>
                     <div className='col-6 mt-1 mb-2 text-center '>
-                        <button type="button" ref={this.popUp} className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" ref={this.popUp} className="btn btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
                     <div className='col-6 mt-1 mb-2  text-center  '>
-                        <button type="button"  className="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">
+                        <button type="button"  className="btn btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
                             Dua's
                         </button>
                     </div>

@@ -15,12 +15,13 @@
     padding: 3px 40px !important;
     font-size: 0.9rem !important;
     border-radius: 1rem !important;
+    color:#fff;
 }
 
-.btn-success{
+.btn-success-custom{
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important
 }
-.btn-primary{
+.btn-primary-custom{
     background-image: linear-gradient(to right, #F7BB97 0%, #DD5E89 51%, #F7BB97 100%)!important
 }
 
