@@ -20,38 +20,38 @@
 }
 
 .btn-success-custom{
-    background: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important;
     background:  -webkit-linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important
 }
 .btn-primary-custom{
-    background: linear-gradient(to right, #F7BB97 0%, #DD5E89 51%, #F7BB97 100%)!important;
+    background-image: linear-gradient(to right, #F7BB97 0%, #DD5E89 51%, #F7BB97 100%)!important;
     background:  -webkit-linear-gradient(to right, #F7BB97 0%, #DD5E89 51%, #F7BB97 100%)!important
 }
 
 .tableHeader{
     background-color: #3f0d12;
-    background: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
+    background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
     background:  -webkit-linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
 }
 
 .modalHeader{
-    background: linear-gradient(to right, #ed213a, #c7ab57);
+    background-image: linear-gradient(to right, #ed213a, #c7ab57);
     background:  -webkit-linear-gradient(to right, #ed213a, #c7ab57);
     color: white;
 }
 
 .modalBody{
-    background: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
+    background-image: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
     background:  -webkit-linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
 }
 
 .modalFooter{
-    background: linear-gradient(to left, #ed213a, #4e555d);
+    background-image: linear-gradient(to left, #ed213a, #4e555d);
     background:  -webkit-linear-gradient(to left, #ed213a, #4e555d);
 }
 
 .highlight{
-    background:  linear-gradient(to left, #1e9600, #fff200, #ff0000);
+    background-image:  linear-gradient(to left, #1e9600, #fff200, #ff0000);
     background:   -webkit-linear-gradient(to left, #1e9600, #fff200, #ff0000);
 }
 
