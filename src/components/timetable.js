@@ -80,10 +80,10 @@ class timetable extends Component {
 
 
     render() { 
-      
+
 // console.log(timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY')).length>0)
-        setInterval(this.timeForSehr,1000)
-        setInterval(this.timeForIftar,1000)
+        setInterval(this.timeForSehr,100)
+        setInterval(this.timeForIftar,100)
           
         let style={  
             // backgroundImage: url(kotergate),
@@ -153,9 +153,12 @@ class timetable extends Component {
                             <div className="modal-content">
                                 <div className="modal-header modalHeader">
                                         <h4 className="modal-title " id="exampleModalLongTitle">Today's</h4>
-                                        <button type="button" className="close " data-dismiss="modal" aria-label="Close">
+                                        <a href="#" className="close closeCustom " data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </button>          
+                                        </a>          
+                                        {/* <button type="button" className="close closeCustom " data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>           */}
                                 </div>
                                 <div className="modal-body modalBody">
                                 {
@@ -228,9 +231,9 @@ class timetable extends Component {
                             <div className="modal-content">
                                 <div className="modal-header modalHeader">
                                   <h4 className="modal-title " id="exampleModalLongTitle">Dua for Roza no.{e.roza}</h4>
-                                        <button type="button" className="close " data-dismiss="modal" aria-label="Close">
+                                        <a href="#" className="close closeCustom " data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </button>          
+                                        </a>          
                                 </div>
                                 <div className="modal-body modalBody">
                                 
