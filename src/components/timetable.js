@@ -106,7 +106,7 @@ class timetable extends Component {
                             Today
                         </button>
                     </div>
-                    <div className='col-4 mt-1 mb-2 text-center '>
+                    <div className='col-4 mt-1 mb-2 text-center'>
                         <a href='/quran'  className="btn btn-quran">
                             QURAN
                         </a>
