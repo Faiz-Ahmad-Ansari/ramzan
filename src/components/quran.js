@@ -18,7 +18,7 @@ class Quran extends Component {
     }
     render() { 
         return (
-            <div className='container-fluid p-0'>
+            <div className='container-fluid p-0 quranContainer'>
                 <div className='titleQuran'>
                 <div className='row p-0 m-0 '>
                     <h1 className='text-center  col-12 p-0 m-0'>Quran</h1>
@@ -37,36 +37,60 @@ class Quran extends Component {
                 </div>
                 </div>
                 <div className='BodyQuran '>
-                
-                
-                {console.log(this.state.clickedSurah)}
-                {
-                    this.state.indexOpen ?
-                        surah.map(e=>{
-                            return(
-                            <div className='surahHeader row justify-content-center ' onClick={()=>this.surah(e)}>
-                                <div className='col-2 '>{e.index}</div>
-                                <div className='col-6 text-left'>{e.name}</div>
-                            </div>
-                            )
-                        })
-                    : null
-                }
+            {
+            this.state.indexOpen ? 
+                <div className='table-responsive '>
+                    <table className='table text-center table-bordered table-hover m-0'>
+                        <thead className=''>
+                            <tr className='tableHeader text-white ' >
+                                <th scope='col-2' className='text-center '>Sr.No.</th>
+                                <th scope='col-8' className='text-center '>Surah</th>
+                                <th scope='col-2' className='text-center '>Verse</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+               
+                                {
+                                    surah.map((e,i)=>{
+                                    return(
+                                    <tr key={i} className='surahIndex'onClick={()=>this.surah(e)}>
+                                        <td className=' '>{e.index}</td>
+                                        <td className=''>{e.name}</td>
+                                        <td className=''>{e.count}</td>
+                                    </tr>
+                                    )
+                                })
+                               
+                                }
+                        
+                           
+                        </tbody>
+                    </table>
+                </div> 
+                   : null
+    }
+
                 {
                     this.state.indexOpen === false?
-                        <>
+                        <div className='surahContainer'>
                         <div>{<div className='surahHeader'>{this.state.clickedSurah.index} {this.state.clickedSurah.name}</div>}</div>
                         {Object.entries(this.state.clickedSurah.verse).map(
                                 ([key,val],i)=>{
                                     return(
                                         <>
-                                        <div className=' surahBody'>{i+1}  {val}</div>
+                                        <div className='surahBody row'>
+                                            <div className='col-1 verseParent'>
+                                                <div className='verseNo'>{i+1}</div>
+                                                </div>
+                                              <div className='col-11'>{val}</div>
+                                              </div>
+  
                                         {console.log(i+1,key,val)}
                                         </>
                                     )
                                 }
                             )}
-                        </>        
+                        </div>        
                             : null
                 }
                 </div>

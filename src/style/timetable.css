@@ -96,8 +96,11 @@
 
 .surahHeader{
     text-align: center;
-    font-size: 2rem;
+    font-size:1.5rem;
     border-bottom: 1px solid grey;
+    background-color: #3f0d12;
+    background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%);
+    color: #fff;
 }
 .surahBody{
     text-align: right;
@@ -105,6 +108,32 @@
     padding:10px 20px;
     border-bottom: 0.4px solid grey;
 }
+.surahIndex:active{
+    background-image: linear-gradient(to left, #fbd786, #f7797d, #fbd786);
+}
+.verseParent{
+    margin: auto;
+}
+.verseNo{
+    text-align: center;
+    /* margin: 0px 6px; */
+    font-size: 13px;
+}
+.quranContainer{
+    animation: slideMe 1s ease;
+}
+@keyframes slideMe{
+    from{transform:translateY(-500px);}
+    to{transform: translateY(0px);}
+}
+.surahContainer{
+    animation: slideMe2 2s ease;
+}
+@keyframes slideMe2{
+    from{transform:translateY(500px);}
+    to{transform: translateY(0px);}
+}
+
 
 .footer {
     position: fixed;
