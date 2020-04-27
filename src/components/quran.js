@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import surah from './surah'
 import '../style/timetable.css'
 
@@ -24,9 +25,9 @@ class Quran extends Component {
                 </div>
                 <div className='row bg-dark p-0 m-0'>
                     <div className='col-6 mt-2 mb-2 text-center quranBtn'>
-                        <button type="button" onClick={()=>window.location.href='/'}  className="btn btn-primary-custom" >
+                        <Link to='/'  className="btn btn-primary-custom" >
                             Back to Timetable
-                        </button>
+                        </Link>
                     </div>
                     <div className='col-6 mt-2 mb-2  text-center '>
                         <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn-success-custom">

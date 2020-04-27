@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import {Link} from 'react-router-dom';
 import moment from 'moment';
 import bgImage from '../assets/bgIslam.jpg'
 import timeTableData from './data'
@@ -103,13 +104,13 @@ class timetable extends Component {
                 <div className='row p-0 m-0'>
                     <div className='col-4 mt-1 mb-2 text-center '>
                         <button type="button" ref={this.popUp} className="btn btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
-                            today
+                            Today
                         </button>
                     </div>
                     <div className='col-4 mt-1 mb-2 text-center '>
-                        <a href='/quran'  className="btn btn-quran">
+                        <Link to='/quran'  className="btn btn-quran">
                             QURAN
-                        </a>
+                        </Link>
                     </div>
                     <div className='col-4 mt-1 mb-2  text-center  '>
                         <button type="button"  className="btn btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
