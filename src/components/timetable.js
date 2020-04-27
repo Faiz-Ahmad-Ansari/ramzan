@@ -103,10 +103,10 @@ class timetable extends Component {
                 <div className='row p-0 m-0'>
                     <div className='col-4 mt-1 mb-2 text-center '>
                         <button type="button" ref={this.popUp} className="btn btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
-                            Today
+                            today
                         </button>
                     </div>
-                    <div className='col-4 mt-1 mb-2 text-center'>
+                    <div className='col-4 mt-1 mb-2 text-center '>
                         <a href='/quran'  className="btn btn-quran">
                             QURAN
                         </a>
