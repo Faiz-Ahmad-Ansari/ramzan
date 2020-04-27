@@ -18,7 +18,22 @@
     border-radius: 1rem !important;
     color:#fff;
 }
+.quranBtn>.btn{
+    padding: 3px 20px !important;
+    font-size: 0.9rem !important;
+    border-radius: 1rem !important;
+    color:#fff;
+}
 
+/* .btn-quran{
+    background-image: linear-gradient(to left, #fdfc47 0%, #24fe41 51%, #fdfc47 100%);
+   color: black;
+} */
+.btn-quran {
+    background-image: linear-gradient(to right, #AAFFA9 0%, #11FFBD 51%, #AAFFA9 100%);
+    color: black;
+}
+.btn-quran:hover { background-position: right center; }
 .btn-success-custom{
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important;
     /* background-image:  -webkit-linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important */
@@ -42,8 +57,9 @@
 
 .modalBody{
     background-image: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
-    /* background-image:  -webkit-linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); */
+    
 }
+
 
 .modalFooter{
     background-image: linear-gradient(to left, #ed213a, #4e555d);
@@ -58,4 +74,45 @@
 .closeCustom{
     cursor: pointer !important;
 }
+
+/* Quran */
+
+.titleQuran{
+    background-image: linear-gradient(to right, #ed213a, #c7ab57);
+    /* background-image:  -webkit-linear-gradient(to right, #ed213a, #c7ab57); */
+    color: white;
+    position: sticky;
+    z-index: 9;
+    top: 0;
+}
+
+.BodyQuran{
+    background-image: linear-gradient(to left, #f7797d, #fbd786, #f7797d);
+    height: 86vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* font-size: 2.2rem; */
+}
+
+.surahHeader{
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 1px solid grey;
+}
+.surahBody{
+    text-align: right;
+    font-size: 2rem;
+    padding:10px 20px;
+    border-bottom: 0.4px solid grey;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to left, #ed213a, #4e555d);
+    color: white;
+    text-align: center;
+ }
 

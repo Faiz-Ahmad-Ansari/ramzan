@@ -101,12 +101,17 @@ class timetable extends Component {
                 </div>
                 {/* <!-- Button trigger modal --> */}
                 <div className='row p-0 m-0'>
-                    <div className='col-6 mt-1 mb-2 text-center '>
+                    <div className='col-4 mt-1 mb-2 text-center '>
                         <button type="button" ref={this.popUp} className="btn btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
-                    <div className='col-6 mt-1 mb-2  text-center  '>
+                    <div className='col-4 mt-1 mb-2 text-center '>
+                        <a href='/quran'  className="btn btn-quran">
+                            QURAN
+                        </a>
+                    </div>
+                    <div className='col-4 mt-1 mb-2  text-center  '>
                         <button type="button"  className="btn btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
                             Dua's
                         </button>
