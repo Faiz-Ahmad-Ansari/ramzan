@@ -5,10 +5,13 @@ import bgImage from '../assets/bgIslam.jpg'
 import timeTableData from './data'
 import '../style/timetable.css' 
 
+
 class timetable extends Component {
     constructor(props) {
         super(props);
+        this.timer = null;
         this.popUp = createRef()
+        this.modal1 = createRef()
         this.state = { 
             openModal :false,
             timeLeftForSehr : '',
@@ -16,9 +19,16 @@ class timetable extends Component {
          }
     }
     
-    componentDidMount(){
-        this.popUp.current.click()
-    }
+    // componentDidMount(){
+    //     this.popUp.current.click()
+    //     this.timer=setTimeout(this.modalClose1,5000)
+    // }
+
+    // componentWillUnmount(){
+    //     if(this.timer){
+    //         clearTimeout(this.timer);
+    //     }
+    // }
 
     timeForSehr = () => {
         let currentDateTime = moment().format('DD MMM YYYY hh:mm:ss a');
@@ -79,12 +89,16 @@ class timetable extends Component {
         }    
     } 
 
+    modalClose1 = () => {
+        this.modal1.current.click()
+    }
+
 
     render() { 
 
 // console.log(timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY')).length>0)
-        setInterval(this.timeForSehr,100)
-        setInterval(this.timeForIftar,100)
+        setInterval(this.timeForSehr,1000)
+        setInterval(this.timeForIftar,1000)
           
         let style={  
             // backgroundImage: url(kotergate),
@@ -95,25 +109,25 @@ class timetable extends Component {
           }
         return (
             <div style={style}>
-                <div className='row m-0 title' >
+                <div className='row m-0 title'  >
                      <div className='col-12  mt-2'>
-                         <h4 className='text-center '>Ramzan Time Table 2020</h4>
+                         <h4 className='text-center '  >Ramzan Time Table 2020</h4>
                     </div>
                 </div>
                 {/* <!-- Button trigger modal --> */}
                 <div className='row p-0 m-0'>
                     <div className='col-4 mt-1 mb-2 text-center '>
-                        <button type="button" ref={this.popUp} className="btn btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" ref={this.popUp} className="btn btn1 btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
                     <div className='col-4 mt-1 mb-2 text-center '>
-                        <Link to='/quran'  className="btn btn-quran">
+                        <Link to='/quran'  className="btn btn1 btn-quran">
                             QURAN
                         </Link>
                     </div>
                     <div className='col-4 mt-1 mb-2  text-center  '>
-                        <button type="button"  className="btn btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
+                        <button type="button"  className="btn btn1 btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
                             Dua's
                         </button>
                     </div>
@@ -131,8 +145,7 @@ class timetable extends Component {
                         </thead>
                         <tbody >
                         {
-                            timeTableData.map((e,i)=>{
-                                                            
+                            timeTableData.map((e,i)=>{                       
                                  return(            
                                         // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
                                         <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'highlight font-weight-bold' : 'text-white'}>
@@ -152,16 +165,15 @@ class timetable extends Component {
                     {/* <hr/> */}
                 </div>
 
-
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered modal" role="document">
                             <div className="modal-content">
                                 <div className="modal-header modalHeader">
                                         <h4 className="modal-title " id="exampleModalLongTitle">Today's</h4>
-                                        <a href="#" className="close closeCustom " data-dismiss="modal" aria-label="Close">
+                                        <button type='button' ref={this.modal1} className="close closeCustom " onClick={this.modalClose1}   aria-label="Close" data-dismiss='modal'>
                                             <span aria-hidden="true">&times;</span>
-                                        </a>          
+                                        </button>          
                                         {/* <button type="button" className="close closeCustom " data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>           */}
@@ -237,9 +249,9 @@ class timetable extends Component {
                             <div className="modal-content">
                                 <div className="modal-header modalHeader">
                                   <h4 className="modal-title " id="exampleModalLongTitle">Dua for Roza no.{e.roza}</h4>
-                                        <a href="#" className="close closeCustom " data-dismiss="modal" aria-label="Close">
+                                        <button type='button' className="close closeCustom " data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </a>          
+                                        </button>          
                                 </div>
                                 <div className="modal-body modalBody">
                                 

@@ -1,45 +1,97 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import {Link} from 'react-router-dom';
 import surah from './surah'
+import surahEnglish from './surahEnglish'
 import '../style/timetable.css'
 
 class Quran extends Component {
     constructor(props) {
         super(props);
+        this.scrollRef = createRef()
         this.state = { 
             clickedSurah : '',
+            clickedSurahEnglish : '',
+            englishTranslation:false,
             indexOpen : true
          }
     }
     surah = (e) => {
         console.log(e)
-        window.scrollTo(0, 0)
+        // setTimeout(this.scrollon,5000)
+        // window.scrollTo(0, 0)
+        this.surahEng(e)
         this.setState({clickedSurah:e,indexOpen:false})
     }
+
+    surahEng = (e) => {
+        console.log(e.index)
+        console.log(surahEnglish.filter((f)=>f.index===e.index)[0])
+        let clickedSurahEnglish = surahEnglish.filter((f)=>f.index===e.index)[0]
+        this.setState({clickedSurahEnglish:clickedSurahEnglish})
+    }
+
+    scrollon = () => {
+        // window.scrollTo(0, 0)
+        this.scrollRef.current.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+        console.log('hit')
+        console.log(this.scrollRef.current)
+    }
+    
+
     render() { 
         return (
             <div className='container-fluid p-0 quranContainer'>
-                <div className='titleQuran'>
-                <div className='row p-0 m-0 '>
-                    <h1 className='text-center  col-12 p-0 m-0'>Quran</h1>
-                </div>
-                <div className='row bg-dark p-0 m-0'>
-                    <div className='col-6 mt-2 mb-2 text-center quranBtn'>
-                        <Link to='/'  className="btn btn-primary-custom" >
-                            Back to Timetable
-                        </Link>
+                <div className='titleQuran  p-0 m-0'>
+                    <div className='row p-0 m-0 '>
+                        <h1 className='text-center  col-12 pb-2 m-0 quran'>Quran</h1>
                     </div>
-                    <div className='col-6 mt-2 mb-2  text-center '>
-                        <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn-success-custom">
-                            Quran Index
-                        </button>
-                    </div>
-                </div>
+                 {this.state.indexOpen ?
+                    <div className='row bg-dark p-0 m-0 justify-content-center'>
+                        <div className='col-6 mt-2 mb-2 text-center quranBtn'>
+                            <Link to='/'  className="btn btn1 btn-primary-custom" >
+                                Back to Timetable
+                            </Link>
+                        </div>
+                        {/* <div className='col-6 mt-2 mb-2  text-center '>
+                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn1 btn-success-custom">
+                                Quran Index
+                            </button>
+                        </div> */}
+                     </div>
+                        :
+                        <div className='row bg-dark p-0 m-0 justify-content-center'>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center'>
+                            <Link to='/'  className="btn btn2 btn-success-custom" >
+                                Timetable
+                            </Link>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center '>
+                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn2 btn-success-custom">
+                                Quran Index
+                            </button>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center '>
+                        {this.state.englishTranslation?
+                            <button type="button" onClick={()=>this.setState({englishTranslation:false})} className="btn btn2 btn-success-custom">
+                                In Arabic
+                            </button>:
+                            <button type="button" onClick={()=>this.setState({englishTranslation:true})} className="btn btn2 btn-success-custom">
+                                In English
+                            </button>
+                            }
+                        </div>
+                     </div>
+                    }
+                       
+                   
                 </div>
                 <div className='BodyQuran '>
             {
             this.state.indexOpen ? 
-                <div className='table-responsive '>
+                <div  className='table-responsive '>
                     <table className='table text-center table-bordered table-hover m-0'>
                         <thead className=''>
                             <tr className='tableHeader text-white ' >
@@ -72,24 +124,46 @@ class Quran extends Component {
 
                 {
                     this.state.indexOpen === false?
-                        <div className='surahContainer'>
-                        <div>{<div className='surahHeader'>{this.state.clickedSurah.index} {this.state.clickedSurah.name}</div>}</div>
-                        {Object.entries(this.state.clickedSurah.verse).map(
-                                ([key,val],i)=>{
-                                    return(
-                                        <>
-                                        <div className='surahBody row'>
-                                            <div className='col-1 verseParent'>
-                                                <div className='verseNo'>{i+1}</div>
+                        <div ref={this.scrollRef} className='surahContainer'>
+                        <div className='surahHeader row justify-content-center'>
+                            <div className='col-2 '>{this.state.clickedSurah.index}</div> 
+                            <div className='col-8 p-0'>{this.state.clickedSurah.name}</div>
+                            
+                        </div>
+                        {this.state.englishTranslation ?
+                        <>
+                            {Object.entries(this.state.clickedSurahEnglish.verse).map(
+                                    ([key,val],i)=>{
+                                        return(
+                                            <>
+                                            <div className='surahBodyEnglish row'>
+                                                <div className='col-11'>{val}</div>
+                                                <div className='col-1 verseParent'>
+                                                    <div className='verseNo'>{i+1}</div>
                                                 </div>
-                                              <div className='col-11'>{val}</div>
-                                              </div>
-  
-                                        {console.log(i+1,key,val)}
-                                        </>
-                                    )
-                                }
-                            )}
+                                            </div>
+                                            </>
+                                        )
+                                    }
+                                )}
+                                </> :
+                                <>
+                            {Object.entries(this.state.clickedSurah.verse).map(
+                                    ([key,val],i)=>{
+                                        return(
+                                            <>
+                                            <div className='surahBody row'>
+                                                <div className='col-1 verseParent'>
+                                                    <div className='verseNo'>{i+1}</div>
+                                                </div>
+                                                <div className='col-11'>{val}</div>
+                                            </div>
+                                            </>
+                                        )
+                                    }
+                                )}
+                                </>
+                            }
                         </div>        
                             : null
                 }
