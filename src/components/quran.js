@@ -46,13 +46,13 @@ class Quran extends Component {
             <div className='container-fluid p-0 quranContainer'>
                 <div className='titleQuran  p-0 m-0'>
                     <div className='row p-0 m-0 '>
-                        <h1 className='text-center  col-12 pb-2 m-0 quran'>Quran</h1>
+                        <h1 className='text-center  col-12 p-0 m-0 quran'>Quran</h1>
                     </div>
                  {this.state.indexOpen ?
-                    <div className='row bg-dark p-0 m-0 justify-content-center'>
+                    <div className='row  p-0 m-0 justify-content-center'>
                         <div className='col-6 mt-2 mb-2 text-center quranBtn'>
-                            <Link to='/'  className="btn btn1 btn-primary-custom" >
-                                Back to Timetable
+                            <Link to='/'  className="btn btn1 btn-quran2" >
+                                Timetable
                             </Link>
                         </div>
                         {/* <div className='col-6 mt-2 mb-2  text-center '>
@@ -62,23 +62,23 @@ class Quran extends Component {
                         </div> */}
                      </div>
                         :
-                        <div className='row bg-dark p-0 m-0 justify-content-center'>
+                        <div className='row  p-0 m-0 justify-content-center'>
                         <div className='col-4 mt-2 mb-2 p-0 text-center'>
-                            <Link to='/'  className="btn btn2 btn-success-custom" >
+                            <Link to='/'  className="btn btn2 btn-quran2" >
                                 Timetable
                             </Link>
                         </div>
                         <div className='col-4 mt-2 mb-2 p-0 text-center '>
-                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn2 btn-success-custom">
+                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn2 btn-quran2">
                                 Quran Index
                             </button>
                         </div>
                         <div className='col-4 mt-2 mb-2 p-0 text-center '>
                         {this.state.englishTranslation?
-                            <button type="button" onClick={()=>this.setState({englishTranslation:false})} className="btn btn2 btn-success-custom">
+                            <button type="button" onClick={()=>this.setState({englishTranslation:false})} className="btn btn2 btn-quran2">
                                 In Arabic
                             </button>:
-                            <button type="button" onClick={()=>this.setState({englishTranslation:true})} className="btn btn2 btn-success-custom">
+                            <button type="button" onClick={()=>this.setState({englishTranslation:true})} className="btn btn2 btn-quran2">
                                 In English
                             </button>
                             }
@@ -92,7 +92,7 @@ class Quran extends Component {
             {
             this.state.indexOpen ? 
                 <div  className='table-responsive '>
-                    <table className='table text-center table-bordered table-hover m-0'>
+                    <table className='table  text-center table-bordered table-hover m-0'>
                         <thead className=''>
                             <tr className='tableHeader text-white ' >
                                 <th scope='col-2' className='text-center '>Sr.No.</th>
@@ -169,7 +169,7 @@ class Quran extends Component {
                 }
                 </div>
                 <div className='footer row m-0 p-0'>
-                     <div className='col-12'><span className='small'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div>
+                     <div className='col-12'><span className='small'>Developed by,</span> Faiz Ahmad Ansari, 7775995030</div>
                 </div>
             </div>
           );

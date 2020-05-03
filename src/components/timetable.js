@@ -109,15 +109,15 @@ class timetable extends Component {
           }
         return (
             <div style={style}>
-                <div className='row m-0 title'  >
+                <div className='row m-0 title timeTable'  >
                      <div className='col-12  mt-2'>
-                         <h4 className='text-center '  >Ramzan Time Table 2020</h4>
+                         <h4 className='text-center timeTable'  >Ramzan Time Table 2020</h4>
                     </div>
                 </div>
                 {/* <!-- Button trigger modal --> */}
                 <div className='row p-0 m-0'>
                     <div className='col-4 mt-1 mb-2 text-center '>
-                        <button type="button" ref={this.popUp} className="btn btn1 btn-primary-custom" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" ref={this.popUp} className="btn btn1 btn-timetable" data-toggle="modal" data-target="#exampleModalCenter">
                             Today
                         </button>
                     </div>
@@ -127,14 +127,14 @@ class timetable extends Component {
                         </Link>
                     </div>
                     <div className='col-4 mt-1 mb-2  text-center  '>
-                        <button type="button"  className="btn btn1 btn-success-custom" data-toggle="modal" data-target="#exampleModalCenter2">
+                        <button type="button"  className="btn btn1 btn-timetable" data-toggle="modal" data-target="#exampleModalCenter2">
                             Dua's
                         </button>
                     </div>
                 </div>
 
                 <div className='table-responsive '>
-                    <table className='table text-center table-bordered table-hover m-0'>
+                    <table className='table  text-center table-bordered table-hover m-0'>
                         <thead className=''>
                             <tr className='tableHeader text-white ' >
                                 <th scope='col' className='text-center '>Roza</th>
@@ -148,7 +148,7 @@ class timetable extends Component {
                             timeTableData.map((e,i)=>{                       
                                  return(            
                                         // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
-                                        <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'highlight font-weight-bold' : 'text-white'}>
+                                        <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'bg-warning font-weight-bold' : 'text-white'}>
                                             <td>{e.roza}</td>
                                             <td>{e.date}</td>
                                             <td>{e.sehr }</td>
