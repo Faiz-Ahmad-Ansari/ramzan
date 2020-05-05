@@ -137,8 +137,8 @@ class Quran extends Component {
                                         return(
                                             <>
                                             <div className='surahBodyEnglish row'>
-                                                <div className='col-11'>{val}</div>
-                                                <div className='col-1 verseParent'>
+                                                <div className='col-11 pr-0'>{val}</div>
+                                                <div className='col-1 pl-0 verseParent'>
                                                     <div className='verseNo'>{i+1}</div>
                                                 </div>
                                             </div>
@@ -153,10 +153,10 @@ class Quran extends Component {
                                         return(
                                             <>
                                             <div className='surahBody row'>
-                                                <div className='col-1 verseParent'>
+                                                <div className='col-1 pr-0 verseParent'>
                                                     <div className='verseNo'>{i+1}</div>
                                                 </div>
-                                                <div className='col-11'>{val}</div>
+                                                <div className='col-11 pl-0'>{val}</div>
                                             </div>
                                             </>
                                         )
