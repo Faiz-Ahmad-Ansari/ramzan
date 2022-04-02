@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import {Link} from 'react-router-dom';
 import moment from 'moment';
-import bgImage from '../assets/bgIslam.jpg'
+// import bgImage from '../assets/bgIslam.jpg'
 import timeTableData from './data'
 import '../style/timetable.css' 
 
@@ -100,68 +100,74 @@ class timetable extends Component {
         setInterval(this.timeForSehr,1000)
         setInterval(this.timeForIftar,1000)
           
-        let style={  
-            // backgroundImage: url(kotergate),
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }
+        // let style={  
+        //     // backgroundImage: url(kotergate),
+        //     backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
+        //     backgroundPosition: 'center',
+        //     backgroundSize: 'cover',
+        //     backgroundRepeat: 'no-repeat'
+        //   }
         return (
-            <div style={style}>
-                <div className='row m-0 title timeTable'  >
-                     <div className='col-12  mt-2'>
-                         <h4 className='text-center timeTable'  >Ramzan Time Table 2020</h4>
+            <div className='timetable-container'>
+                <div className="title-container">                
+                    <div className='row m-0 title'  >
+                        <div className='col-12  mt-2'>
+                            <h4 className='text-center quran'  >Ramzan 2022</h4>
+                        </div>
                     </div>
-                </div>
                 {/* <!-- Button trigger modal --> */}
-                <div className='row p-0 m-0'>
-                    <div className='col-4 mt-1 mb-2 text-center '>
-                        <button type="button" ref={this.popUp} className="btn btn1 btn-timetable1" data-toggle="modal" data-target="#exampleModalCenter">
-                            Today
-                        </button>
-                    </div>
-                    <div className='col-4 mt-1 mb-2 text-center '>
-                        <Link to='/quran'  className="btn btn1 btn-quran">
-                            QURAN
-                        </Link>
-                    </div>
-                    <div className='col-4 mt-1 mb-2  text-center  '>
-                        <button type="button"  className="btn btn1 btn-timetable2" data-toggle="modal" data-target="#exampleModalCenter2">
-                            Dua's
-                        </button>
+                    <div className='row p-0 m-0'>
+                        <div className='col-4 mt-1 mb-2 text-center '>
+                            <button type="button" ref={this.popUp} className="btn btn1 btn-quran2" data-toggle="modal" data-target="#exampleModalCenter">
+                                Today
+                            </button>
+                        </div>
+                        <div className='col-4 mt-1 mb-2 text-center '>
+                            <Link to='/quran'  className="btn btn1 btn-quran2">
+                                QURAN
+                            </Link>
+                        </div>
+                        <div className='col-4 mt-1 mb-2  text-center  '>
+                            <button type="button"  className="btn btn1 btn-quran2" data-toggle="modal" data-target="#exampleModalCenter2">
+                                Dua's
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <div className='table-responsive '>
-                    <table className='table  text-center  table-hover m-0'>
-                        <thead className=''>
-                            <tr className='tableHeader text-white ' >
-                                <th scope='col' className='text-center '>Roza</th>
-                                <th scope='col' className='text-center '>Date</th>
-                                <th scope='col' className='text-center '>Sehr </th>
-                                <th scope='col' className='text-center '>Iftaar</th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                        {
-                            timeTableData.map((e,i)=>{                       
-                                 return(            
-                                        // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
-                                        <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'bg-highlight font-weight-bold' : 'text-white'}>
-                                            <td className='pr-0 pl-0'>{e.roza}</td>
-                                            <td className='pr-0 pl-0'>{e.date}</td>
-                                            <td className='pr-0 pl-0'>{e.sehr }</td>
-                                            <td className='pr-0 pl-0'>{e.iftaar}</td>
-                                        </tr>
-                                        )
-                                    })
-                                }
-                           
-                        </tbody>
-                    </table>
+                    <div className="timetable-body">                    
+                        <table className='table  text-center table-bordered table-hover m-0'>
+                            <thead className=''>
+                                <tr className='tableHeader ' >
+                                    <th scope='col' className='text-center '>Roza</th>
+                                    <th scope='col' className='text-center '>Date</th>
+                                    <th scope='col' className='text-center '>Sehr </th>
+                                    <th scope='col' className='text-center '>Iftaar</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                            {
+                                timeTableData.map((e,i)=>{                       
+                                    return(            
+                                            // <tr key={i} className={`${e.date === '15 May 2019' ? 'bg-warning' : ''}${i%7 && e.date !== '15 May 2019' ? 'table-warning':'table-danger'}`}>
+                                            <tr key={i} className={e.date === moment().format('DD MMM YYYY') ? 'bg-highlight font-weight-bold text-white' : ''}>
+                                                <td className='pr-0 pl-0'>{e.roza}</td>
+                                                <td className='pr-0 pl-0'>{e.date}</td>
+                                                <td className='pr-0 pl-0'>{e.sehr }</td>
+                                                <td className='pr-0 pl-0'>{e.iftaar}</td>
+                                            </tr>
+                                            )
+                                        })
+                                    }
+                            
+                            </tbody>
+                        </table>
+                    </div>
                     {/* <hr/> */}
+                    <div className="footer">
                         <div className='text-info text-center pt-1'><span className='small text-white-50'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div>
+                    </div>
                     {/* <hr/> */}
                 </div>
 
@@ -234,7 +240,7 @@ class timetable extends Component {
                                 }
                             </div>
                             <div className="modal-footer modalFooter justify-content-center">
-                                       <div className='text-white  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
+                                       <div className='  small'>Developed by Faiz Ahmad Ansari, 7775995030</div>             
                             </div>
                         </div>
                     </div>
