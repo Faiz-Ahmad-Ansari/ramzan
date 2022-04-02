@@ -94,7 +94,7 @@ class Quran extends Component {
                 <div  className='table-responsive '>
                     <table className='table  text-center table-bordered table-hover m-0'>
                         <thead className=''>
-                            <tr className='tableHeader text-white ' >
+                            <tr className='tableHeader  ' >
                                 <th scope='col-2' className='text-center '>Sr.No.</th>
                                 <th scope='col-8' className='text-center '>Surah</th>
                                 <th scope='col-2' className='text-center '>Verse</th>

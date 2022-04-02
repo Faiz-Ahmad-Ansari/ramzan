@@ -18,12 +18,19 @@
     box-shadow: 1.5px 1.5px 1px #fff !important;
 } */
 .table-bordered td, .table-bordered th {
-    border: 0.5px solid #dee2e6 !important;
+    border: 1px solid rgba(255, 255, 255, .4) !important;
 }
+.table td, .table th {
+    border-top: 1px solid rgba(255, 255, 255, .4) !important;
+}.table thead th {
+    /* vertical-align: bottom; */
+    border-bottom: 1px solid rgba(255, 255, 255, .4) !important;
+}
+
 .btn1{
     padding: 2px 30px !important;
     font-size: 0.9rem !important;
-    border-radius: 1rem !important;
+    border-radius: 50px !important;
     color:#fff;
 }
 .btn2{
@@ -47,19 +54,39 @@
    color: black;
 } */
 .btn-quran {
-    background-image: linear-gradient(to right, #ed213a 0%, #F7BB97 51%, #ed213a 100%);
+    /* background-image: linear-gradient(to right, #ed213a 0%, #F7BB97 51%, #ed213a 100%); */
+    background: #6D6D6D;
+    background: -webkit-linear-gradient(left, #6D6D6D, #B5B5B5, #6D6D6D);
+    background: -moz-linear-gradient(left, #6D6D6D, #B5B5B5, #6D6D6D);
+    background: linear-gradient(to right, #6D6D6D, #B5B5B5, #6D6D6D);
     color: white;
-    text-shadow: 0.5px 0.5px 0.5px black;
-    box-shadow: 1.5px 1.5px 1px #fff !important;
+    /* text-shadow: 0.5px 0.5px 0.5px black;
+    box-shadow: 1.5px 1.5px 1px #fff !important; */
 }
 
 .btn-quran:hover { background-position: right center; }
-.btn-timetable{
-    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+.btn-timetable1{
+    /* background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%); */
     /* background-image:  -webkit-linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important */
+    /* Created with https://www.css-gradient.com */
+    background: #6D6D6D;
+    background: -webkit-linear-gradient(left, #6D6D6D, #B5B5B5);
+    background: -moz-linear-gradient(left, #6D6D6D, #B5B5B5);
+    background: linear-gradient(to right, #6D6D6D, #B5B5B5);
     color: white;
-    text-shadow: 0.5px 0.5px 0.5px black;
-    box-shadow: 1.5px 1.5px 1px #fff !important;
+    /* text-shadow: 0.5px 0.5px 0.5px black;
+    box-shadow: 1.5px 1.5px 1px #fff !important; */
+}
+.btn-timetable2{
+    /* background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%); */
+    /* background-image:  -webkit-linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)!important */
+    background: #6D6D6D;
+    background: -webkit-linear-gradient(left,  #B5B5B5, #6D6D6D);
+    background: -moz-linear-gradient(left,  #B5B5B5, #6D6D6D);
+    background: linear-gradient(to right,  #B5B5B5, #6D6D6D);
+    color: white;
+    /* text-shadow: 0.5px 0.5px 0.5px black;
+    box-shadow: 1.5px 1.5px 1px #fff !important; */
 }
 .btn-quran2{
     background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%);
@@ -69,8 +96,8 @@
 }
 
 .tableHeader{
-    background-color: #3f0d12;
-    background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%); 
+    /* background-color: #3f0d12;
+    background-image: linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%);  */
     /* background-image:  -webkit-linear-gradient(179deg, #3f0d12 -225%, #a71d31 195%);  */
 }
 
@@ -273,4 +300,12 @@
   @keyframes spin {
     0% {transform: rotate(0deg)}
     100% {transform: rotate(-360deg)}
+  }
+
+  .bg-highlight{
+      /* Created with https://www.css-gradient.com */
+    background: #B7B7B7;
+    background: -webkit-linear-gradient(top, #B7B7B7, #969696);
+    background: -moz-linear-gradient(top, #B7B7B7, #969696);
+    background: linear-gradient(to bottom, #B7B7B7, #969696);
   }
