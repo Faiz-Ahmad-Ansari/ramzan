@@ -265,6 +265,9 @@
   .timetable-container{
     background-image: linear-gradient(to left,#f7797d, #fbd786, #f7797d);
   }
+  .todays-container{
+    background-image: linear-gradient(to left,#f7797d, #fbd786, #f7797d);
+  }
 
   .timetable-body{
     height: 83.5vh;
@@ -277,4 +280,22 @@
     z-index: 9;
     top: 0;
     border-bottom: 1px solid grey;
+  }
+
+  .title-container2{
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    border-bottom: 1px solid grey;
+    height: 9vh;
+  }
+
+  .border-bottom-grey{
+    border-bottom: 1px solid rgba(128, 128, 128, .4);
+  }
+
+  .todays-body{
+    height: 86.5vh;
+    overflow-x: hidden;
+    overflow-y: auto;
   }

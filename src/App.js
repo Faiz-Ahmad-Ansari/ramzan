@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const TimeTable = lazy(() => import('./components/timetable'));
 const Quran = lazy(() => import('./components/quran'));
+const Todays = lazy(() => import('./components/todays'));
+
 function App() {
   return (
     <div >
@@ -17,6 +19,7 @@ function App() {
           <Switch>
             <Route path='/' exact component={TimeTable} />
             <Route path='/quran' component={Quran} />
+            <Route path='/todays' component={Todays} />
           </Switch>
         </Suspense>
       </BrowserRouter>

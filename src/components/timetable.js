@@ -1,7 +1,6 @@
 import React, { Component, createRef } from 'react';
 import {Link} from 'react-router-dom';
 import moment from 'moment';
-// import bgImage from '../assets/bgIslam.jpg'
 import timeTableData from './data'
 import '../style/timetable.css' 
 
@@ -20,7 +19,7 @@ class timetable extends Component {
     }
     
     // componentDidMount(){
-    //     this.popUp.current.click()
+    //current.click()
     //     this.timer=setTimeout(this.modalClose1,5000)
     // }
 
@@ -66,8 +65,7 @@ class timetable extends Component {
         let todaysObjInMs   = moment(currentDateTime).valueOf()
         let iftarTimeInMs    = moment(iftarTime).valueOf()
         let differenceForIftar = iftarTimeInMs - todaysObjInMs
-        
-        // console.log(differenceForSehr)
+                
         let timeLeftForIftar;
             if (differenceForIftar > 0) {
                 timeLeftForIftar = {
@@ -78,11 +76,8 @@ class timetable extends Component {
                 }
                 
             } else { 
-                timeLeftForIftar = 'Done for today'
-                
-            }
-            // console.log(timeLeftForIftar)
-
+                timeLeftForIftar = 'Done for today'                
+            }            
             this.setState({timeLeftForIftar:timeLeftForIftar})
         }else {
             return false
@@ -95,18 +90,9 @@ class timetable extends Component {
 
 
     render() { 
-
-// console.log(timeTableData.filter(e=>e.date === moment().format('DD MMM YYYY')).length>0)
         setInterval(this.timeForSehr,1000)
         setInterval(this.timeForIftar,1000)
           
-        // let style={  
-        //     // backgroundImage: url(kotergate),
-        //     backgroundImage: `linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(${bgImage})`,
-        //     backgroundPosition: 'center',
-        //     backgroundSize: 'cover',
-        //     backgroundRepeat: 'no-repeat'
-        //   }
         return (
             <div className='timetable-container'>
                 <div className="title-container">                
@@ -118,9 +104,9 @@ class timetable extends Component {
                 {/* <!-- Button trigger modal --> */}
                     <div className='row p-0 m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
-                            <button type="button" ref={this.popUp} className="btn btn1 btn-quran2" data-toggle="modal" data-target="#exampleModalCenter">
-                                Today
-                            </button>
+                            <Link to='/todays'  className="btn btn1 btn-quran2">
+                                Today's
+                            </Link>
                         </div>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/quran'  className="btn btn1 btn-quran2">
@@ -171,8 +157,8 @@ class timetable extends Component {
                     {/* <hr/> */}
                 </div>
 
-                    {/* <!-- Modal --> */}
-                    <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    {/* <!-- Modal (Not needed Now 03/2022--> */}
+                    {/* <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered modal" role="document">
                             <div className="modal-content">
                                 <div className="modal-header modalHeader">
@@ -180,13 +166,11 @@ class timetable extends Component {
                                         <button type='button' ref={this.modal1} className="close closeCustom " onClick={this.modalClose1}   aria-label="Close" data-dismiss='modal'>
                                             <span aria-hidden="true">&times;</span>
                                         </button>          
-                                        {/* <button type="button" className="close closeCustom " data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>           */}
+                                        
                                 </div>
                                 <div className="modal-body modalBody">
                                 {
-                                    // console.log(timeTableData.filter(e=>e.date==='15 May 2019'))                                    
+                                                                        
                                     timeTableData.filter(e=>e.date===moment().format('DD MMM YYYY')).map((e,i)=>{
                                         return(
                                             <div key={i}>
@@ -225,8 +209,7 @@ class timetable extends Component {
                                                     <div className='col-4'>Time for Iftar</div>
                                                     <div className='col-2'>:</div> 
                                                     <div className='col-6'><b>
-                                                        {/* {console.log(this.state.timeLeftForIftar ==='Done for today')} */}
-                                                    {
+                                    {
                                                             this.state.timeLeftForIftar !== '' ?
                                                             this.state.timeLeftForIftar === 'Done for today' ? 'Done for today' : 
                                                             ` ${this.state.timeLeftForIftar.hours} Hrs, ${this.state.timeLeftForIftar.minutes} Min, ${this.state.timeLeftForIftar.seconds} Sec`
@@ -244,7 +227,7 @@ class timetable extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* modal end */}
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="exampleModalCenter2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
