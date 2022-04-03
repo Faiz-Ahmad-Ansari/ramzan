@@ -178,14 +178,13 @@
     /* margin: 0px 6px; */
     font-size: 13px;
 }
-.quranContainer{
+/* .quranContainer{
     animation: slideMe 1s ease;
-    /* border: 2px solid black; */
 }
 @keyframes slideMe{
     from{transform:translateY(-500px);}
     to{transform: translateY(0px);}
-}
+} */
 .surahContainer{
     animation: slideMe2 2s ease;
 }
