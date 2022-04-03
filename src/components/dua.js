@@ -5,7 +5,7 @@ import '../style/timetable.css'
 function Dua() {
     return ( 
         <div className="todays-container">
-            <div className="title-container2">                
+            <div className="title-container">                
                     <div className='row m-0 title'  >
                         <div className='col-12  mt-2'>
                             <h4 className='text-center quran'  >Dua's</h4>
@@ -13,10 +13,10 @@ function Dua() {
                     </div>
                 </div>
 
-                <div className="todays-body p-0 m-0 ">
+                <div className="timetable-body p-0 m-0 ">
                                                 
                     <div className="text-center">
-                        <div className='text-left font-weight-bold pt-2 pl-3'>Dua For Sehr & Iftar</div>
+                        <div className='text-left font-weight-bold mt-2 pt-5 pl-3'>Dua For Sehr & Iftar</div>
                         <div className="row  m-0 p-0 m-0 p-0 pt-2 pb-1">
                                 <div className="col-4 text-left pl-3 font-weight-bold ">Sehr</div>
                                 <div className="col-8 text-left font-weight-bold"><i> "Wa bisawmi ghadinn nawaiytu min shahri Ramadan"</i></div>
@@ -62,7 +62,7 @@ function Dua() {
                     </div>                                                                                         
                 </div>
 
-                <div className=""><div className='row border-top-grey pt-1 p-0 m-0'>
+                <div className='row btns-group border-top-grey pt-1 p-0 m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/'  className="btn btn1 btn-quran2">
                                 Timetable
@@ -82,8 +82,7 @@ function Dua() {
                     <div className='footer row m-0 p-0'>
                         <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari, <span> <a  target="_blank" href="https://faizansari.tech/" rel="noopener noreferrer">https://faizansari.tech/</a> 7775995030  </span></div>
                     </div>
-                        {/* <div className='text-info text-center pt-1'><span className='small text-white-50'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div> */}
-                </div>
+                      
         </div>
      );
 }

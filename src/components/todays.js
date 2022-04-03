@@ -70,7 +70,7 @@ function Todays() {
 
     return ( 
         <div className="todays-container">
-            <div className="title-container2">                
+            <div className="title-container">                
                     <div className='row m-0 title'  >
                         <div className='col-12  mt-2'>
                             <h4 className='text-center quran'  >Today's</h4>
@@ -78,12 +78,12 @@ function Todays() {
                     </div>
                 </div>
 
-                <div className="todays-body p-0 m-0 ">
+                <div className="timetable-body p-0 m-0 ">
                 {
                     timeTableData.filter(e=>e.date===moment().format('DD MMM YYYY')).map((e,i)=>{                       
                         return(                                            
                                 <div className="text-center">
-                                    <div className="row border-bottom-grey m-0 p-0 m-0 p-0 pt-2 pb-2">
+                                    <div className="row border-bottom-grey m-0 p-0 mt-2 p-0 pt-5 pb-2">
                                         <div className="col-4 text-left pl-3 ">Roza No.</div>
                                         <div className="col-8 text-left">{e.roza}</div>
                                      </div>
@@ -135,7 +135,7 @@ function Todays() {
                         }
                 </div>
 
-                <div className=""><div className='row border-top-grey pt-1 p-0 m-0'>
+                <div className='row btns-group border-top-grey pt-1 p-0 m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/'  className="btn btn1 btn-quran2">
                                 Timetable
@@ -155,8 +155,7 @@ function Todays() {
                     <div className='footer row m-0 p-0'>
                         <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari, <span> <a  target="_blank" href="https://faizansari.tech/" rel="noopener noreferrer">https://faizansari.tech/</a> 7775995030  </span></div>
                     </div>
-                        {/* <div className='text-info text-center pt-1'><span className='small text-white-50'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div> */}
-                </div>
+                      
         </div>
      );
 }

@@ -141,7 +141,7 @@
 
 .BodyQuran{
     background-image: linear-gradient(to left, #f7797d, #fbd786, #f7797d);
-    height: 86.2vh;
+    height: 91vh;
     overflow-x: hidden;
     overflow-y: auto;
     /* font-size: 2.2rem; */
@@ -204,7 +204,7 @@
     color: #fff;
     text-align: center;
     text-shadow: 1px 1px 1px black;
-    font-size: 1.2vh;
+    font-size: 1.8vh;
  }
 
  .loader{
@@ -272,17 +272,19 @@
   }
 
   .timetable-body{
-    height: 86vh;
+    height: 92vh;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
   .title-container{
-    position: sticky;
+    position: fixed;
     z-index: 9;
     top: 0;
     border-bottom: 1px solid grey;
-    height: 6.5vh;
+    /* top: 6vh; */
+    width: 100%;
+    background-image: linear-gradient(to left,#f7797d, #fbd786, #f7797d);
   }
 
   .title-container2{
@@ -310,10 +312,10 @@
   .btns-quran{
     background-image: linear-gradient(to left,#f7797d, #fbd786, #f7797d);  
   }
-  /* .timeTable-btns{
+  .btns-group{
     position: fixed;
-    left: 0;
-    bottom: 15px;
+    /* left: 0; */
+    bottom: 23px;
     width: 100%;
     background-image: linear-gradient(to left,#f7797d, #fbd786, #f7797d);
-  } */
+  }

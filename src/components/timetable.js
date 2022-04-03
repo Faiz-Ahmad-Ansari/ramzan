@@ -57,7 +57,7 @@ class timetable extends Component {
                         </table>
                     </div>
                     {/* <hr/> */}
-                    <div className='row p-0 pt-1 border-top-grey m-0'>
+                    <div className='row btns-group p-0 pt-1 border-top-grey m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/todays'  className="btn btn1 btn-quran2">
                                 Today's
