@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import moment from 'moment';
 import timeTableData from './data'
@@ -125,7 +125,7 @@ function Todays() {
                                             <div className="col-8 text-left"><i>"{e.dua}"</i></div>
                                         </div>
                                         <div className="row border-bottom-grey m-0 p-0 pt-2 pb-2">
-                                            <div className="col-4 text-left pl-3 ">Dua Meaning</div>
+                                            <div className="col-4 text-left pl-3 ">Meaning</div>
                                             <div className="col-8 text-left">{e.duaMeaning}</div>
                                         </div>
                                 </div>
@@ -135,10 +135,10 @@ function Todays() {
                         }
                 </div>
 
-                <div className=""><div className='row p-0 m-0'>
+                <div className=""><div className='row border-top-grey pt-1 p-0 m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/'  className="btn btn1 btn-quran2">
-                                Back
+                                Timetable
                             </Link>
                         </div>
                         <div className='col-4 mt-1 mb-2 text-center '>
@@ -147,10 +147,13 @@ function Todays() {
                             </Link>
                         </div>
                         <div className='col-4 mt-1 mb-2  text-center  '>
-                            <button type="button"  className="btn btn1 btn-quran2" >
+                            <Link to='/dua'  className="btn btn1 btn-quran2">
                                 Dua's
-                            </button>
+                            </Link>
                         </div>
+                    </div>
+                    <div className='footer row m-0 p-0'>
+                        <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari, <span> <a  target="_blank" href="https://faizansari.tech/" rel="noopener noreferrer">https://faizansari.tech/</a> 7775995030  </span></div>
                     </div>
                         {/* <div className='text-info text-center pt-1'><span className='small text-white-50'>Developed by</span> Faiz Ahmad Ansari, 7775995030</div> */}
                 </div>

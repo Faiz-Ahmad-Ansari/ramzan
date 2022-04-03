@@ -44,22 +44,17 @@ class Quran extends Component {
     render() { 
         return (
             <div className='container-fluid p-0 quranContainer'>
-                <div className='titleQuran  p-0 m-0'>
+                <div className='titleQuran  p-0 pt-2 m-0'>
                     <div className='row p-0 m-0 '>
                         <h1 className='text-center  col-12 p-0 m-0 quran'>Quran</h1>
                     </div>
-                 {this.state.indexOpen ?
+                 {/* {this.state.indexOpen ?
                     <div className='row  p-0 m-0 justify-content-center'>
                         <div className='col-6 mt-2 mb-2 text-center quranBtn'>
                             <Link to='/'  className="btn btn1 btn-quran2" >
                                 Timetable
                             </Link>
                         </div>
-                        {/* <div className='col-6 mt-2 mb-2  text-center '>
-                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn1 btn-success-custom">
-                                Quran Index
-                            </button>
-                        </div> */}
                      </div>
                         :
                         <div className='row  p-0 m-0 justify-content-center'>
@@ -84,7 +79,7 @@ class Quran extends Component {
                             }
                         </div>
                      </div>
-                    }
+                    } */}
                        
                    
                 </div>
@@ -168,6 +163,49 @@ class Quran extends Component {
                             : null
                 }
                 </div>
+                {this.state.indexOpen ?
+                    <div className='row btns-quran border-top-grey p-0 m-0 justify-content-center'>
+                        <div className='col-4 mt-2 mb-2 text-center quranBtn'>
+                            <Link to='/todays'  className="btn btn1 btn-quran2" >
+                                Today's
+                            </Link>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 text-center quranBtn'>
+                            <Link to='/'  className="btn btn1 btn-quran2" >
+                                Timetable
+                            </Link>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 text-center quranBtn'>
+                            <Link to='/dua'  className="btn btn1 btn-quran2" >
+                                Dua's
+                            </Link>
+                        </div>
+            
+                     </div>
+                        :
+                        <div className='row btns-quran border-top-grey p-0 m-0 justify-content-center'>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center'>
+                            <Link to='/'  className="btn btn2 btn-quran2" >
+                                Timetable
+                            </Link>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center '>
+                            <button type="button" onClick={()=>this.setState({indexOpen:true})} className="btn btn2 btn-quran2">
+                                Quran Index
+                            </button>
+                        </div>
+                        <div className='col-4 mt-2 mb-2 p-0 text-center '>
+                        {this.state.englishTranslation?
+                            <button type="button" onClick={()=>this.setState({englishTranslation:false})} className="btn btn2 btn-quran2">
+                                In Arabic
+                            </button>:
+                            <button type="button" onClick={()=>this.setState({englishTranslation:true})} className="btn btn2 btn-quran2">
+                                In English
+                            </button>
+                            }
+                        </div>
+                     </div>
+                    }
                 <div className='footer row m-0 p-0'>
                      <div className='col-12'><span className='small'>Developed by,</span> Faiz Ahmad Ansari, 7775995030</div>
                 </div>
