@@ -81,7 +81,7 @@ class timetable extends Component {
                     {/* <hr/> */}
                 </div>
                 <div className='footer row m-0 p-0'>
-                    <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari, <span> <a  target="_blank" href="https://faizansari.tech/" rel="noopener noreferrer">https://faizansari.tech/</a> 7775995030  </span></div>
+                    <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari</div>
                 </div>
             </div>
           );
