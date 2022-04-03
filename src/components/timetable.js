@@ -28,7 +28,7 @@ class timetable extends Component {
                 </div>
 
                 <div className='table-responsive '>
-                    <div className="timetable-body">                    
+                    <div className="timetable-body pt-5 ">                    
                         <table className='table  text-center table-bordered table-hover m-0'>
                             <thead className=''>
                                 <tr className='tableHeader ' >
