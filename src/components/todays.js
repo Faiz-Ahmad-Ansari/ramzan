@@ -138,7 +138,7 @@ function Todays() {
                 <div className='row btns-group border-top-grey pt-1 p-0 m-0'>
                         <div className='col-4 mt-1 mb-2 text-center '>
                             <Link to='/'  className="btn btn1 btn-quran2">
-                                Timetable
+                                Back
                             </Link>
                         </div>
                         <div className='col-4 mt-1 mb-2 text-center '>
