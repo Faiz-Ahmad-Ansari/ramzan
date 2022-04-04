@@ -78,7 +78,7 @@ function Todays() {
                     </div>
                 </div>
 
-                <div className="timetable-body p-0 m-0 ">
+                <div className="timetable-body pt-2 pb-5 ">
                 {
                     timeTableData.filter(e=>e.date===moment().format('DD MMM YYYY')).map((e,i)=>{                       
                         return(                                            
@@ -99,9 +99,8 @@ function Todays() {
                                         <div className="col-4 text-left pl-3 ">Iftaar</div>
                                         <div className="col-8 text-left">{e.iftaar}</div>
                                      </div>
-                                     
                                      <div className="row border-bottom-grey m-0 p-0 pt-2 pb-2">
-                                        <div className="col-4 text-left pl-3 ">Time left for Sehr</div>
+                                        <div className="col-4 text-left pl-3 ">Time left for sehr</div>
                                         <div className="col-8 text-left">
                                         {
                                             timeLeftForSehr !== '' ?
@@ -109,17 +108,19 @@ function Todays() {
                                             ` ${timeLeftForSehr.hours} Hrs, ${timeLeftForSehr.minutes} Min, ${timeLeftForSehr.seconds} Sec` : null 
                                         }          
                                         </div>
-                                     </div><div className="row border-bottom-grey m-0 p-0 pt-2 pb-2 ">
+                                     </div>
+                                     <div className="row border-bottom-grey m-0 p-0 pt-2 pb-2">
                                         <div className="col-4 text-left pl-3 ">Time left for Iftar</div>
-                                        <div className="col-8 text-left ">
-                                            {
+                                        <div className="col-8 text-left">
+                                        {
                                                 timeLeftForIftar !== '' ?
                                                 timeLeftForIftar === 'Done for today' ? 'Done for today' : 
                                                 ` ${timeLeftForIftar.hours} Hrs, ${timeLeftForIftar.minutes} Min, ${timeLeftForIftar.seconds} Sec`
                                                     : null 
-                                            }         
+                                            }
                                         </div>
                                      </div>
+                                     
                                         <div className="row border-bottom-grey m-0 p-0 pt-2 pb-2">
                                             <div className="col-4 text-left pl-3 ">Dua</div>
                                             <div className="col-8 text-left"><i>"{e.dua}"</i></div>

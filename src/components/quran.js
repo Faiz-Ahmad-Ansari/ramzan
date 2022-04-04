@@ -50,7 +50,7 @@ class Quran extends Component {
                     </div>
                    
                 </div>
-                <div className='BodyQuran '>
+                <div className='BodyQuran pt-5 pb-5'>
             {
             this.state.indexOpen ? 
                 <div  className='table-responsive '>

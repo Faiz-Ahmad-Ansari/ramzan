@@ -13,7 +13,7 @@ function Dua() {
                     </div>
                 </div>
 
-                <div className="timetable-body p-0 m-0 ">
+                <div className="timetable-body pt-2 pb-5 ">
                                                 
                     <div className="text-center">
                         <div className='text-left font-weight-bold mt-2 pt-5 pl-3'>Dua For Sehr & Iftar</div>

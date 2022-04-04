@@ -28,7 +28,7 @@ class timetable extends Component {
                 </div>
 
                 <div className='table-responsive '>
-                    <div className="timetable-body pt-5 ">                    
+                    <div className="timetable-body pt-5 pb-5">                    
                         <table className='table  text-center table-bordered table-hover m-0'>
                             <thead className=''>
                                 <tr className='tableHeader ' >
@@ -81,7 +81,7 @@ class timetable extends Component {
                     {/* <hr/> */}
                 </div>
                 <div className='footer row m-0 p-0'>
-                    <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari</div>
+                    <div className='col-12'><span className='small'>Developed by,</span> Faiz Ahmad Ansari - 7775995030</div>
                 </div>
             </div>
           );
