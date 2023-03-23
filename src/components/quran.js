@@ -159,7 +159,7 @@ class Quran extends Component {
                     </div>
                 }
                 <div className='footer row m-0 p-0'>
-                    <div className='col-12'><span className=''>Developed by,</span> Faiz Ahmad Ansari</div>
+                <div className='col-12'><span className='small'>Developed by,</span> Faiz Ahmad Ansari - 7775995030 | faiz.js</div>
                 </div>
             </div>
         );
