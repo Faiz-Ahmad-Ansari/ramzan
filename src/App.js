@@ -20,7 +20,7 @@ function App() {
           <Switch>
             <Route path='/' exact component={TimeTable} />
             <Route path='/quran' component={Quran} />
-            <Route path='/todays' component={Todays} />
+            <Route path='/todays/:date' component={Todays} />
             <Route path='/dua' component={Dua} />
           </Switch>
         </Suspense>
