@@ -48,7 +48,7 @@ function Dua() {
                         <div className="small pt-1">I seek forgiveness from Allah for all my sins and turn to Him.</div>
                     </div>
 
-                    <div className="duaCard" style={{ background: 'darkseagreen' }}>
+                    <div className="duaCard" style={{ background: 'wheat' }}>
                         <div className=" font-weight-bold text-left small">Third Ashra</div>
                         <div className="font-weight-bold mt-3 mb-3 duaText"><h3> اَللَّهُمَّ أَجِرْنِي مِنَ النَّارِ</h3></div>
                         <div className="small pt-1">O Allah, save me from the hellfire.</div>

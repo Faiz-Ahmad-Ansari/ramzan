@@ -74,6 +74,8 @@ function Todays() {
         history.push(`/todays/${date}`);
     }
 
+    const backgroundColors = ['bisque', 'indianred', 'darkseagreen', 'darkslateblue', 'ivory', 'lightcoral'];
+
     return (
         <div className="todays-container">
             {isRamzanDay ?
@@ -89,6 +91,8 @@ function Todays() {
                     <div style={{ height: '85vh' }} className="timetable-body-og pt-2 pb-5 ">
                         {
                             timeTableData.filter(e => e.date === date).map((e, i) => {
+                                const bgColor = backgroundColors[e.roza % backgroundColors.length]; // Use modular arithmetic to cycle through colors
+                                const color = e.roza % 2 === 0 ? '#242424' : '#fff';
                                 return (
                                     <div className="text-center">
                                         <div className=" pt-1 pb-2 small">
@@ -110,7 +114,7 @@ function Todays() {
                                             </div>
                                         </div>
 
-                                        <div className="duaCard" style={{ background: 'indianred', color: '#ffffffe3' }}>
+                                        <div className="duaCard" style={{ background: bgColor, color: color }}>
                                             <div className="font-weight-bold text-left small">Dua of the day {e.roza}</div>
                                             <div className="small pt-1 mt-1"><i> "{e.dua}"</i></div>
                                             <div className="small pt-3">{e.duaMeaning}</div>
