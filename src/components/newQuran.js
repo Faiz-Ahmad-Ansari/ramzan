@@ -16,7 +16,7 @@ class Quran extends Component {
             englishTranslation: false,
             indexOpen: true,
             // backgroundColors: ['bisque', 'indianred', 'darkseagreen', 'darkslateblue', 'ivory', 'darkmagenta'],
-            backgroundColors: ['bisque', 'indianred'],
+            // backgroundColors: ['bisque', 'indianred'],
         };
         this.newBodyRef = React.createRef();
     }
@@ -83,7 +83,7 @@ class Quran extends Component {
 
 
     render() {
-        const { backgroundColors } = this.state;
+        // const { backgroundColors } = this.state;
         return (
             <div className='container-fluid p-0 quranContainer'>
                 <div className="title-container-dua">
