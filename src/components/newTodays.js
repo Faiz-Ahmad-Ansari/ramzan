@@ -79,15 +79,19 @@ function Todays() {
             {isRamzanDay ?
                 <>
                     <div className="title-container">
-                        <h3 className='text-center newTitle' >Day {timeTableData.filter(e => e.date === date).map((e) => e.roza)}</h3>
+                        <h3 className='text-center newSurahHeader' >Roza {timeTableData.filter(e => e.date === date).map((e) => e.roza)}</h3>
+                    </div>
+                    <div className="title-container-dua">
+                        <h3 className='text-center newSurahHeader pl-4 pt-2' >Roza No. {timeTableData.filter(e => e.date === date).map((e) => e.roza)}</h3>
+                        <h3 className='text-center newSurahHeader pr-4 pt-2' > روزا </h3>
                     </div>
 
-                    <div style={{height:'85vh'}} className="timetable-body-og pt-2 pb-5 ">
+                    <div style={{ height: '85vh' }} className="timetable-body-og pt-2 pb-5 ">
                         {
                             timeTableData.filter(e => e.date === date).map((e, i) => {
                                 return (
                                     <div className="text-center">
-                                        <div className=" pt-5 pb-2 small">
+                                        <div className=" pt-1 pb-2 small">
                                             <div className='newTableHeaders'>
                                                 <span style={{ width: "10%" }}>Roza</span>
                                                 <span >Date</span>
@@ -119,7 +123,7 @@ function Todays() {
                     </div>
                 </>
                 :
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height:'85vh' ,color: '#fff' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '85vh', color: '#fff' }}>
                     <div>It's not a ramzan day today</div>
                 </div>
             }
@@ -140,12 +144,12 @@ function Todays() {
 
                 <div onClick={() => handleClick(moment().format('DD MMM YYYY'))} style={{ width: '20%' }} className=' mt-1 mb-2 text-center newBtn'>
                     {/* <Link to='/dua' > */}
-                        <div style={{ color: '#ffffffde' }}>
-                            آج
-                        </div>
-                        <div className="btn newBtn1 ">
-                            Today's
-                        </div>
+                    <div style={{ color: '#ffffffde' }}>
+                        آج
+                    </div>
+                    <div className="btn newBtn1 ">
+                        Today's
+                    </div>
                     {/* </Link> */}
                 </div>
 
@@ -163,13 +167,13 @@ function Todays() {
             <div className='footer-new m-0 p-0'>
                 <div className='mb-2' style={{ color: 'grey' }}>
                     <span className='small footerTitle'>Designed & Developed by -
-                        <span className='ml-3' style={{fontSize:'12px'}}>
-                            Faiz Ahmad Ansari 
-                            <span className='ml-3' style={{fontSize:'15px'}}>
+                        <span className='ml-3' style={{ fontSize: '12px' }}>
+                            Faiz Ahmad Ansari
+                            <span className='ml-3' style={{ fontSize: '15px' }}>
                                 فیض احمد انصاری
                             </span>
                         </span>
-                    </span>                    
+                    </span>
                 </div>
             </div>
 

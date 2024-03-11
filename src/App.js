@@ -14,7 +14,7 @@ function App() {
   return (
     <div >
       <BrowserRouter>
-        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'black' }}>
+        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh', background: 'black', color: '#fff'}}>
           <div>Loading...</div>
         </div>
         }>

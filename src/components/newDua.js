@@ -22,7 +22,7 @@ function Dua() {
             </div>
 
             <div className="timetable-body-og pt-2 pb-5 ">
-                <div className="text-center pt-5 pb-5">
+                <div className="text-center pt-1 pb-5">
                     <div className="duaCard" style={{ background: 'wheat' }}>
                         <div className="font-weight-bold text-left small">Sehr</div>
                         <div className="font-weight-bold mt-1 mb-3 duaText"><h3> وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ</h3></div>

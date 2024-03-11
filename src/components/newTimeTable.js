@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect}  from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
 import { data2024 as timeTableData } from './data';
@@ -23,6 +23,8 @@ import '../style/newTimetable.css';
 const NewTimetable = () => {
     let history = useHistory();
 
+    useEffect(() => window.scrollTo(0, 0),[])
+
     function handleClick(date) {
         history.push(`/todays/${date}`);
     }
@@ -36,7 +38,7 @@ const NewTimetable = () => {
 
             <div className='table-responsive '>
                 <div className="timetable-body-og pb-5 small">
-                    <div className='newTableHeaders'>
+                    <div className='newTableHeaders' style={{color:'f5f5f5'}}>
                         <span style={{ width: "10%" }}>Roza</span>
                         <span >Date</span>
                         <span >Sehr</span>

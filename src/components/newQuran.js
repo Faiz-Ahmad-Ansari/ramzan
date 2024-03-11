@@ -27,6 +27,11 @@ class Quran extends Component {
         this.setState({ clickedSurah: e, indexOpen: false })
     }
 
+    clickQuranIndex = (e) => {
+        setTimeout(this.scrollon,0)
+        this.setState({ indexOpen: true })
+    }
+
     surahEng = (e) => {
         let clickedSurahEnglish = surahEnglish.filter((f) => f.index === e.index)[0]
         this.setState({ clickedSurahEnglish: clickedSurahEnglish })
@@ -38,6 +43,10 @@ class Quran extends Component {
         //     top: 0,
         //     behavior: 'smooth'
         // });
+    }
+
+    componentDidMount(){
+        this.scrollon()
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -95,7 +104,7 @@ class Quran extends Component {
                     {
                         this.state.indexOpen ?
                             <div className='table-responsive-new pb-5'>
-                                <div className='newTableHeaders' style={{ color: '#fff' }}>
+                                <div className='newTableHeaders' style={{ color: '#f5f5f5', borderRadius:'20px' }}>
                                     <span style={{ width: "25%" }}>Sr.No.</span>
                                     <span style={{ width: "25%" }}>Surah</span>
                                     <span style={{ width: "25%" }}>سورة</span>
@@ -106,10 +115,10 @@ class Quran extends Component {
                                         // const bgColor = backgroundColors[i % backgroundColors.length]; // Use modular arithmetic to cycle through colors
                                         // const color = i % 2 === 0 ? '#242424' : '#fff';
                                         // const arabicRegex = /[\u0600-\u06FF\u0750-\u077F]/;
+                                        const rowStyles = i % 2 === 0 ? { color: '#242424', backgroundColor: '#ffffffe3', borderRadius:'20px' } : { borderRadius:'20px'};
                                         const nameArray = this.splitArabicAndEnglish(e.name)
-                                        console.log(nameArray);
                                         return (
-                                            <div key={i} className='newTableRow' onClick={() => this.surah(e)}>
+                                            <div key={i} className='newTableRow' style={rowStyles} onClick={() => this.surah(e)}>
                                                 <span className=' '>{e.index}</span>
                                                 <span className=''>{nameArray[0]}</span>
                                                 <span style={{fontSize:'1.3rem'}} className=''>{nameArray[1]}</span>
@@ -213,10 +222,10 @@ class Quran extends Component {
                         </div>
 
                         <div  className=' mt-1 mb-2 text-center newBtn'>
-                            <button type="button" onClick={() => this.setState({ indexOpen: true })} className="btn newBtn1 ">
+                            <button type="button" onClick={this.clickQuranIndex} className="btn newBtn1 ">
                                 قرآن انڈیکس
                             </button>
-                            <button type="button" onClick={() => this.setState({ indexOpen: true })} className="btn newBtn1 ">
+                            <button type="button" onClick={this.clickQuranIndex} className="btn newBtn1 ">
                                 Quran Index
                             </button>
                         </div>
