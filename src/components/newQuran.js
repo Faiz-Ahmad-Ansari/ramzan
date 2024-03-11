@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import surah from './surah'
 import surahEnglish from './surahEnglish'
-import '../style/newDua.css'
+import '../style/newTimetable.css'
 import moment from 'moment';
 
 
