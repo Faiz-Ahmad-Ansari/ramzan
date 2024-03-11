@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
-import { data2023 as timeTableData } from './data';
+import { data2024 as timeTableData } from './data';
 import '../style/timetable.css';
 
 
@@ -30,7 +30,7 @@ const Timetable = () => {
             </div>
 
             <div className='table-responsive '>
-                <div className="timetable-body pt-5 pb-5 small">
+                <div className="timetable-body-og  pb-5 small">
                     <table className='table  text-center table-bordered table-hover m-0'>
                         <thead className=''>
                             <tr className='tableHeader ' >

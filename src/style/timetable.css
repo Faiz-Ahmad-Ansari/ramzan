@@ -283,6 +283,16 @@
     height: 85vh;
     overflow-x: hidden;
     overflow-y: auto;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
+  }
+
+  .timetable-body-og{
+    /* height: 85vh; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
   }
 
   .title-container{
@@ -306,6 +316,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.table-responsive{
+  height: 91vh;
 }
 
   .title-container2{

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 // import moment from 'moment';
-import { data2023 as timeTableData } from './data'
+import { data2024 as timeTableData } from './data'
 import '../style/timetable.css'
 
 function Todays() {

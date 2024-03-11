@@ -5,20 +5,21 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const TimeTable = lazy(() => import('./components/timetable'));
-const Quran = lazy(() => import('./components/quran'));
-const Todays = lazy(() => import('./components/todays'));
-const Dua = lazy(() => import('./components/dua'));
+const NewTimeTable = lazy(() => import('./components/newTimeTable'));
+const Quran = lazy(() => import('./components/newQuran'));
+const Todays = lazy(() => import('./components/newTodays'));
+const Dua = lazy(() => import('./components/newDua'));
 
 function App() {
   return (
     <div >
       <BrowserRouter>
-        <Suspense fallback={ <div  className=" d-flex loader  align-items-center justify-content-center">
-               <div class="dizzy-gillespie"></div>
-            </div>
-            }>
+        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <div class="loader"></div>
+        </div>
+        }>
           <Switch>
-            <Route path='/' exact component={TimeTable} />
+            <Route path='/' exact component={NewTimeTable} />
             <Route path='/quran' component={Quran} />
             <Route path='/todays/:date' component={Todays} />
             <Route path='/dua' component={Dua} />
