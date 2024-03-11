@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import surah from './surah'
 import surahEnglish from './surahEnglish'
 import '../style/newTimetable.css'
@@ -103,9 +103,9 @@ class Quran extends Component {
                                 </div>
                                 {
                                     surah.map((e, i) => {
-                                        const bgColor = backgroundColors[i % backgroundColors.length]; // Use modular arithmetic to cycle through colors
-                                        const color = i % 2 === 0 ? '#242424' : '#fff';
-                                        const arabicRegex = /[\u0600-\u06FF\u0750-\u077F]/;
+                                        // const bgColor = backgroundColors[i % backgroundColors.length]; // Use modular arithmetic to cycle through colors
+                                        // const color = i % 2 === 0 ? '#242424' : '#fff';
+                                        // const arabicRegex = /[\u0600-\u06FF\u0750-\u077F]/;
                                         const nameArray = this.splitArabicAndEnglish(e.name)
                                         console.log(nameArray);
                                         return (

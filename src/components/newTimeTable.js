@@ -3,9 +3,9 @@ import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
 import { data2024 as timeTableData } from './data';
 import '../style/newTimetable.css';
-import Allah from '../assets/AllahInArabic.jpeg';
-import Duas1 from '../assets/Duas1.jpeg';
-import Quran2 from '../assets/quran2.jpg';
+// import Allah from '../assets/AllahInArabic.jpeg';
+// import Duas1 from '../assets/Duas1.jpeg';
+// import Quran2 from '../assets/quran2.jpg';
 
 
 

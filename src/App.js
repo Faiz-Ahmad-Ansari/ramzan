@@ -4,7 +4,7 @@ import React, { Suspense, lazy } from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const TimeTable = lazy(() => import('./components/timetable'));
+// const TimeTable = lazy(() => import('./components/timetable'));
 const NewTimeTable = lazy(() => import('./components/newTimeTable'));
 const Quran = lazy(() => import('./components/newQuran'));
 const Todays = lazy(() => import('./components/newTodays'));
