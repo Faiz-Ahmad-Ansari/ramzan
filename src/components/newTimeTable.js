@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
 import { data2024 as timeTableData } from './data';
 import '../style/newTimetable.css';
-import InstallPrompt from './installPrompt';
+// import InstallPrompt from './installPrompt';
 import InstallButton from './installButton';
 // import Allah from '../assets/AllahInArabic.jpeg';
 // import Duas1 from '../assets/Duas1.jpeg';
