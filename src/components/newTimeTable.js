@@ -1,7 +1,7 @@
 import React,{useEffect}  from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
-import { data2024 as timeTableData } from './data';
+import { data2025 as timeTableData } from './data';
 import '../style/newTimetable.css';
 // import InstallPrompt from './installPrompt';
 import InstallButton from './installButton';
@@ -34,9 +34,11 @@ const NewTimetable = () => {
     return (
         <div className='timetable-container-new'>
             <div className="title-container-new">
-                <h3 className='m-0 newSurahHeader pl-3' ><InstallButton />
+                <h3 className='m-0 newSurahHeader pl-3' >
+                    Ramzan TimeTable 2025
                 </h3>
-               <div></div> 
+                {/* <div>Download Button</div> */}
+               <div><InstallButton /></div> 
             </div>
 
             <div className='table-responsive '>

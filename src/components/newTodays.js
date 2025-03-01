@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 // import moment from 'moment';
-import { data2024 as timeTableData } from './data'
+import { data2025 as timeTableData } from './data'
 import '../style/newTimetable.css'
 import moment from 'moment';
 
