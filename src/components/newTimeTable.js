@@ -31,6 +31,7 @@ const NewTimetable = () => {
         history.push(`/todays/${date}`);
     }
 
+    
     return (
         <div className='timetable-container-new'>
             <div className="title-container-new">
