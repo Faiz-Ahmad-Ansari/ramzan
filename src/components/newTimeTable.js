@@ -35,7 +35,7 @@ const NewTimetable = () => {
         <div className='timetable-container-new'>
             <div className="title-container-new">
                 <h3 className='m-0 newSurahHeader pl-3' >
-                    Ramzan TimeTable 2025
+                    Ramzan 2025
                 </h3>
                 {/* <div>Download Button</div> */}
                <div><InstallButton /></div> 
