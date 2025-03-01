@@ -69,8 +69,8 @@ const styles = {
     alignItems: 'center',
     background: "#000",
     color: '#fff',
-    padding: '10px 20px',
-    marginRight: '10px'
+    padding: '5px 10px',
+    margin: '5px 10px'
   },
 };
 
