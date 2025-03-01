@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ramzan App",
+  "name": "Ramzan TimeTable 2025",
   "icons": [
     {
-      "src": "Allah_logo2.png",
+      "src": "ramzanLogo2.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Allah_logo2.png",
+      "src": "ramzanLogo2.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Allah_logo2.png",
+      "src": "ramzanLogo2.png",
       "type": "image/png",
       "sizes": "512x512"
     }

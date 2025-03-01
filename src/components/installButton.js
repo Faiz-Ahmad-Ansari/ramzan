@@ -53,7 +53,7 @@ const InstallButton = () => {
 
   return (
     <button onClick={handleInstallClick} style={styles.button}>
-      {isIos ? 'Add to Home Screen' : 'Install App'}
+      {isIos ? 'Install App' : 'Install App'}
     </button>
   );
 };
