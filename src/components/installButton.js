@@ -3,65 +3,74 @@ import React, { useState, useEffect } from 'react';
 const InstallButton = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstallable, setIsInstallable] = useState(false);
+  const [isIos, setIsIos] = useState(false);
 
   useEffect(() => {
-    const handleBeforeInstallPrompt = (event) => {
-      // Prevent the default prompt
-      event.preventDefault();
-      // Save the event to trigger it later
-      setDeferredPrompt(event);
-      // Show the install button
-      setIsInstallable(true);
+    // Check if the user is on an iOS device
+    const isIosDevice = () => {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    if (isIosDevice()) {
+      setIsIos(true);
+      setIsInstallable(true); // Show the button for iOS devices
+    } else {
+      const handleBeforeInstallPrompt = (event) => {
+        event.preventDefault();
+        setDeferredPrompt(event);
+        setIsInstallable(true);
+      };
 
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    };
+      window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+      return () => {
+        window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      };
+    }
   }, []);
 
   const handleInstallClick = () => {
-    if (deferredPrompt) {
-      // Show the install prompt
+    if (isIos) {
+      // Show instructions for iOS users
+      alert('To install this app, tap the share icon and select "Add to Home Screen".');
+    } else if (deferredPrompt) {
       deferredPrompt.prompt();
-      // Wait for the user to respond
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt');
         } else {
           console.log('User dismissed the install prompt');
         }
-        // Clear the deferred prompt
         setDeferredPrompt(null);
-        // Hide the install button
         setIsInstallable(false);
       });
     }
   };
 
   if (!isInstallable) {
-    return null; // Don't render the button if the app isn't installable
+    return null;
   }
 
   return (
-    <button onClick={handleInstallClick}>
-      Install App
+    <button onClick={handleInstallClick} style={styles.button}>
+      {isIos ? 'Add to Home Screen' : 'Install App'}
     </button>
-    // <div>Hii</div>
   );
 };
 
-// Optional: Add some basic styles
 const styles = {
   button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    backgroundColor: '#007bff',
+    border: "0.5px solid #f5f5f5b4",
+    borderRadius: '6px',
+    boxShadow: "2px 2px 3px #f5f5f5b4",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: "#000",
     color: '#fff',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    padding: '10px 20px',
+    marginRight: '10px'
   },
 };
 
