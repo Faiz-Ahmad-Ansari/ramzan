@@ -10,8 +10,8 @@ export const data2025 = [
     {
         "roza": "2",
         "date": "03 Mar 2025",
-        "sehr": "05:47 am",
-        "iftaar": "06:50 pm",
+        "sehr": "05:33 am",
+        "iftaar": "06:47 pm",
         "dua":"Allahuma karibni fihi ila mardatika wajanibni fihi min sakhatikawa nakima tika wa wafikni fihi likiraa ati ayatikabi rehmatika ya arhamar rahimin",
         "duaMeaning" : " O Allah, on this day, take me closer towards Your pleasure, keep me away from Your anger and punishment, grant me the opportunity to recite Your verses (of the Qur'an), by Your mercy, O the most Merciful"
     },
