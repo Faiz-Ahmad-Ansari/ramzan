@@ -116,7 +116,8 @@ function Todays() {
 
                                         <div className="duaCard" style={{ background: bgColor, color: color }}>
                                             <div className="font-weight-bold text-left small">Dua of the day {e.roza}</div>
-                                            <div className="small pt-1 mt-1"><i> "{e.dua}"</i></div>
+                                            <div className="pt-1 mt-1" style={{ fontSize: "2rem" }}>{e.duaA}</div>
+                                            <div className="small pt-4"><i> "{e.dua}"</i></div>
                                             <div className="small pt-3">{e.duaMeaning}</div>
                                         </div>
 
