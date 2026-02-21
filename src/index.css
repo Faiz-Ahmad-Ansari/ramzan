@@ -3,9 +3,21 @@
   padding: 0px;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  background-color: #000;
+  min-height: 100%;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
+}
+
+.app-root {
+  background-color: #000;
+  min-height: 100vh;
 }
 
 code {

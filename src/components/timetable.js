@@ -3,18 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
 import { data2025 as timeTableData } from './data';
 import '../style/timetable.css';
-
-
-// class Timetable extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = { 
-//             timeLeftForSehr : '',
-//             timeLeftForIftar : ''
-//          }
-//     }
-
-//     render() {     
+  
 
 const Timetable = () => {
     let history = useHistory();

@@ -1,50 +1,33 @@
-import React,{useEffect}  from 'react';
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import moment from 'moment';
-import { data2025 as timeTableData } from './data';
+import { data2026 as timeTableData } from './data';
 import '../style/newTimetable.css';
-// import InstallPrompt from './installPrompt';
 import InstallButton from './installButton';
-// import Allah from '../assets/AllahInArabic.jpeg';
-// import Duas1 from '../assets/Duas1.jpeg';
-// import Quran2 from '../assets/quran2.jpg';
-
-
-
-// class Timetable extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = { 
-//             timeLeftForSehr : '',
-//             timeLeftForIftar : ''
-//          }
-//     }
-
-//     render() {     
 
 const NewTimetable = () => {
     let history = useHistory();
 
-    useEffect(() => window.scrollTo(0, 0),[])
+    useEffect(() => window.scrollTo(0, 0), [])
 
     function handleClick(date) {
         history.push(`/todays/${date}`);
     }
 
-    
+
     return (
         <div className='timetable-container-new'>
             <div className="title-container-new">
                 <h3 className='m-0 newSurahHeader pl-3' >
-                    Ramzan 2025
+                    Ramzan 2026
                 </h3>
                 {/* <div>Download Button</div> */}
-               <div><InstallButton /></div> 
+                <div><InstallButton /></div>
             </div>
 
             <div className='table-responsive '>
                 <div className="timetable-body-og pb-5 small">
-                    <div className='newTableHeaders' style={{color:'f5f5f5'}}>
+                    <div className='newTableHeaders' style={{ color: 'f5f5f5' }}>
                         <span style={{ width: "10%" }}>Roza</span>
                         <span >Date</span>
                         <span >Sehr</span>
@@ -60,7 +43,7 @@ const NewTimetable = () => {
                                 //     <td className='pr-0 pl-0'>{e.sehr}</td>
                                 //     <td className='pr-0 pl-0'>{e.iftaar}</td>
                                 // </tr>
-                                <div key={i} onClick={() => handleClick(e.date)} className={e.date ===  moment().format('DD MMM YYYY') ? 'newTableRow newHighlight' : 'newTableRow'}>
+                                <div key={i} onClick={() => handleClick(e.date)} className={e.date === moment().format('DD MMM YYYY') ? 'newTableRow newHighlight' : 'newTableRow'}>
                                     <span className='pr-0 pl-0' style={{ width: "10%" }}>{e.roza}</span>
                                     <span className='pr-0 pl-0'>{e.date}</span>
                                     <span >
@@ -84,15 +67,15 @@ const NewTimetable = () => {
                                 Dua's
                             </div>
                         </Link>
-                    </div>                    
+                    </div>
                     <div onClick={() => handleClick(moment().format('DD MMM YYYY'))} style={{ width: '20%' }} className=' mt-1 mb-2 text-center newBtn'>
                         {/* <Link to='/todays' > */}
-                            <div style={{ color: '#ffffffde' }}>
-                                آج
-                            </div>
-                            <div className="btn newBtn1 ">
-                                Today's
-                            </div>
+                        <div style={{ color: '#ffffffde' }}>
+                            آج
+                        </div>
+                        <div className="btn newBtn1 ">
+                            Today's
+                        </div>
                         {/* </Link> */}
                     </div>
 
@@ -112,13 +95,13 @@ const NewTimetable = () => {
             <div className='footer-new m-0 p-0'>
                 <div className='mb-2' style={{ color: 'grey' }}>
                     <span className='small footerTitle'>Designed & Developed by -
-                        <span className='ml-3' style={{fontSize:'12px'}}>
-                            Faiz Ahmad Ansari 
-                            <span className='ml-3' style={{fontSize:'15px'}}>
+                        <span className='ml-3' style={{ fontSize: '12px' }}>
+                            Faiz Ahmad Ansari
+                            <span className='ml-3' style={{ fontSize: '15px' }}>
                                 فیض احمد انصاری
                             </span>
                         </span>
-                    </span>                    
+                    </span>
                 </div>
             </div>
         </div>
