@@ -3,6 +3,8 @@ import React, { Suspense, lazy } from 'react';
 // import Quran from './components/quran'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import CountdownBanner from './components/CountdownBanner';
+import { data2026 } from './components/data';
 
 // const TimeTable = lazy(() => import('./components/timetable'));
 const NewTimeTable = lazy(() => import('./components/newTimeTable'));
@@ -12,8 +14,9 @@ const Dua = lazy(() => import('./components/newDua'));
 
 function App() {
   return (
-    <div >
+    <div className="app-root">
       <BrowserRouter>
+        <CountdownBanner data={data2026} />
         <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh', background: 'black', color: '#fff'}}>
           <div>Loading...</div>
         </div>
